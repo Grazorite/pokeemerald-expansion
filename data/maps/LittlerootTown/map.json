@@ -146,6 +146,20 @@
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 26,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_BIRCHS_LAB",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 39,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_LOBBY",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
