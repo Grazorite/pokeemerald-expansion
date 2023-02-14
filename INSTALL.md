@@ -8,7 +8,9 @@ In general, you should not need to open these unless if you get an error or if y
 If you run into trouble, ask for help on Discord or IRC (see [README.md](README.md)).
 
 ## Windows
+
 Windows has instructions for building with three possible terminals, providing 3 different options in case the user stumbles upon unexpected errors.
+
 - [Windows 10/11 (WSL1)](#windows-1011-wsl1) (**Fastest, highly recommended**, Windows 10 and 11 only)
 - [Windows (msys2)](#windows-msys2) (Second fastest)
 - [Windows (Cygwin)](#windows-cygwin) (Slowest)
@@ -17,9 +19,9 @@ Unscientific benchmarks suggest **msys2 is 2x slower** than WSL1, and **Cygwin i
 <details>
     <summary><i>Note for advanced users: <b>WSL2</b>...</i></summary>
 
->   <b>WSL2</b> is an option and is even faster than <b>WSL1</b> if files are stored on the WSL2 file system, but some tools may have trouble interacting
->   with the WSL2 file system over the network drive. For example, tools which use Qt versions before 5.15.2 such as <a href="https://github.com/huderlem/porymap">porymap</a>
->   may <a href="https://bugreports.qt.io/browse/QTBUG-86277">have problems with parsing the <code>\\wsl$</code> network drive path</a>.
+> <b>WSL2</b> is an option and is even faster than <b>WSL1</b> if files are stored on the WSL2 file system, but some tools may have trouble interacting
+> with the WSL2 file system over the network drive. For example, tools which use Qt versions before 5.15.2 such as <a href="https://github.com/huderlem/porymap">porymap</a>
+> may <a href="https://bugreports.qt.io/browse/QTBUG-86277">have problems with parsing the <code>\\wsl$</code> network drive path</a>.
 </details>
 
 All of the Windows instructions assume that the default drive is C:\\. If this differs to your actual drive letter, then replace C with the correct drive letter when reading the instructions.
@@ -27,12 +29,15 @@ All of the Windows instructions assume that the default drive is C:\\. If this d
 **A note of caution**: As Windows 7 is officially unsupported by Microsoft and Windows 8 has very little usage, some maintainers are unwilling to maintain the Windows 7/8 instructions. Thus, these instructions may break in the future with fixes taking longer than fixes to the Windows 10 instructions.
 
 ## Windows 10/11 (WSL1)
+
 WSL1 is the preferred terminal to build **pokeemerald**. The following instructions will explain how to install WSL1 (referred to interchangeably as WSL).
-- If WSL (Debian or Ubuntu) is **not installed**, then go to [Installing WSL1](#Installing-WSL1).
-- Otherwise, if WSL is installed, but it **hasn't previously been set up for another decompilation project**, then go to [Setting up WSL1](#Setting-up-WSL1).
-- Otherwise, **open WSL** and go to [Choosing where to store pokeemerald (WSL1)](#Choosing-where-to-store-pokeemerald-WSL1).
+
+- If WSL (Debian or Ubuntu) is **not installed**, then go to [Installing WSL1](#installing-wsl1).
+- Otherwise, if WSL is installed, but it **hasn't previously been set up for another decompilation project**, then go to [Setting up WSL1](#setting-up-wsl1).
+- Otherwise, **open WSL** and go to [Choosing where to store pokeemerald (WSL1)](#choosing-where-to-store-pokeemerald-wsl1).
 
 ### Installing WSL1
+
 1. Open [Windows Powershell **as Administrator**](https://i.imgur.com/QKmVbP9.png), and run the following command (Right Click or Shift+Insert is paste in the Powershell).
 
     ```powershell
@@ -57,10 +62,12 @@ WSL1 is the preferred terminal to build **pokeemerald**. The following instructi
     </details>
 
 ### Setting up WSL1
+
 Some tips before proceeding:
+
 - In WSL, Copy and Paste is either done via
-    - **right-click** (selection + right click to Copy, right click with no selection to Paste)
-    - **Ctrl+Shift+C/Ctrl+Shift+V** (enabled by right-clicking the title bar, going to Properties, then checking the checkbox next to "Use Ctrl+Shift+C/V as Copy/Paste").
+  - **right-click** (selection + right click to Copy, right click with no selection to Paste)
+  - **Ctrl+Shift+C/Ctrl+Shift+V** (enabled by right-clicking the title bar, going to Properties, then checking the checkbox next to "Use Ctrl+Shift+C/V as Copy/Paste").
 - Some of the commands that you'll run will ask for your WSL password and/or confirmation to perform the stated action. This is to be expected, just enter your WSL password and/or the yes action when necessary.
 
 1. Open **Ubuntu** (e.g. using Search).
@@ -84,6 +91,7 @@ Some tips before proceeding:
     ```bash
     sudo apt install build-essential binutils-arm-none-eabi git libpng-dev
     ```
+
     <details>
         <summary><i>Note...</i></summary>
 
@@ -91,6 +99,7 @@ Some tips before proceeding:
     </details>
 
 ### Choosing where to store pokeemerald (WSL1)
+
 WSL has its own file system that's not natively accessible from Windows, but Windows files *are* accessible from WSL. So you're going to want to store pokeemerald within Windows.
 
 For example, say you want to store pokeemerald (and agbcc) in **C:\Users\\_\<user>_\Desktop\decomps**. First, ensure that the folder already exists. Then, enter this command to **change directory** to said folder, where *\<user>* is your **Windows** username:
@@ -102,9 +111,9 @@ cd /mnt/c/Users/<user>/Desktop/decomps
 <details>
     <summary><i>Notes...</i></summary>
 
->   Note 1: The Windows C:\ drive is called /mnt/c/ in WSL.
->   Note 2: If the path has spaces, then the path must be wrapped with quotations, e.g. `cd "/mnt/c/users/<user>/Desktop/decomp folder"`.
->   Note 3: Windows path names are case-insensitive so adhering to capitalization isn't needed
+> Note 1: The Windows C:\ drive is called /mnt/c/ in WSL.
+> Note 2: If the path has spaces, then the path must be wrapped with quotations, e.g. `cd "/mnt/c/users/<user>/Desktop/decomp folder"`.
+> Note 3: Windows path names are case-insensitive so adhering to capitalization isn't needed
 </details>
 
 If this works, then proceed to [Installation](#installation).
@@ -118,6 +127,7 @@ Otherwise, ask for help on Discord or IRC (see [README.md](README.md)), or conti
 - Otherwise, **open msys2** and go to [Choosing where to store pokeemerald (msys2)](#choosing-where-to-store-pokeemerald-msys2).
 
 ### Installing devkitARM
+
 1. Download the devkitPro installer [here](https://github.com/devkitPro/installer/releases).
 2. Run the devkitPro installer. In the "Choose Components" screen, uncheck everything except GBA Development unless if you plan to install other devkitPro components for other purposes. Keep the install location as C:\devkitPro and leave the Start Menu option unchanged.
 
@@ -132,6 +142,7 @@ Note that in msys2, Copy is Ctrl+Insert and Paste is Shift+Insert.
     ```bash
     pacman -S make zlib-devel git mingw-w64-x86_64-gcc mingw-w64-x86_64-libpng
     ```
+
     <details>
         <summary><i>Note...</i></summary>
 
@@ -139,6 +150,7 @@ Note that in msys2, Copy is Ctrl+Insert and Paste is Shift+Insert.
     </details>
 
 ### Choosing where to store pokeemerald (msys2)
+
 At this point, you can choose a folder to store pokeemerald into. If you're okay with storing pokeemerald in the user profile folder, then proceed to [Installation](#installation). Otherwise, you'll need to account for where pokeemerald is stored when changing directory to the pokeemerald folder.
 
 For example, if you want to store pokeemerald (and agbcc) in **C:\Users\\_\<user>_\Desktop\decomps** (where *\<user>* is your **Windows** username), enter this command:
@@ -152,6 +164,7 @@ If this works, then proceed to [Installation](#installation).
 Otherwise, ask for help on Discord or IRC (see [README.md](README.md)), or continue reading below for [Windows instructions using Cygwin](#windows-cygwin).
 
 ## Windows (Cygwin)
+
 1. If devkitARM is **not installed**, then follow the instructions used to [install devkitARM](#installing-devkitarm) for the msys2 setup before continuing. *Remember to not continue following the msys2 instructions by mistake!*
 
 2.
@@ -160,6 +173,7 @@ Otherwise, ask for help on Discord or IRC (see [README.md](README.md)), or conti
     - Otherwise, **open Cygwin** and go to [Choosing where to store pokeemerald (Cygwin)](#choosing-where-to-store-pokeemerald-cygwin)
 
 ### Installing Cygwin
+
 1. Download [Cygwin](https://cygwin.com/install.html): setup-x86_64.exe for 64-bit Windows, setup-x86.exe for 32-bit.
 
 2. Run the Cygwin setup. Within the Cygwin setup, leave the default settings until the "Choose A Download Site" screen.
@@ -205,36 +219,40 @@ Note that in Cygwin, Copy is Ctrl+Insert and Paste is Shift+Insert.
 Cygwin has its own file system that's within Windows, at **C:\cygwin64\home\\_\<user>_**. If you don't want to store pokeemerald there, you'll need to account for where pokeemerald is stored when **changing directory** to the pokeemerald folder.
 
 For example, if you want to store pokeemerald (and agbcc) in **C:\Users\\_\<user>_\Desktop\decomps**, enter this command, where *\<user>* is your **Windows** username:
+
 ```bash
 cd c:/Users/<user>/Desktop/decomps
 ```
+
 Note that the directory **must exist** in Windows. If you want to store pokeemerald in a dedicated folder that doesn't exist (e.g. the example provided above), then create the folder (e.g. using Windows Explorer) before executing the `cd` command.
 
 <details>
     <summary><i>Notes...</i></summary>
 
->   Note 1: If the path has spaces, then the path must be wrapped with quotations, e.g. `cd "c:/users/<user>/Desktop/decomp folder"`.
->   Note 2: Windows path names are case-insensitive so adhering to capitalization isn't needed
+> Note 1: If the path has spaces, then the path must be wrapped with quotations, e.g. `cd "c:/users/<user>/Desktop/decomp folder"`.
+> Note 2: Windows path names are case-insensitive so adhering to capitalization isn't needed
 </details>
 
 If this works, then proceed to [Installation](#installation). Otherwise, ask for help on Discord or IRC (see [README.md](README.md)).
 
 ## macOS
+
 1. If the Xcode Command Line Tools are not installed, download the tools [here](https://developer.apple.com/xcode/resources/), open your Terminal, and run the following command:
 
     ```bash
     xcode-select --install
     ```
 
-2.  - If libpng is **not installed**, then go to [Installing libpng (macOS)](#installing-libpng-macos).
+2. - If libpng is **not installed**, then go to [Installing libpng (macOS)](#installing-libpng-macos).
     - If devkitARM is **not installed**, then go to [Installing devkitARM (macOS)](#installing-devkitarm-macos).
     - Otherwise, **open the Terminal** and go to [Choosing where to store pokeemerald (macOS)](#choosing-where-to-store-pokeemerald-macos)
 
 ### Installing libpng (macOS)
+
 <details>
     <summary><i>Note for advanced users...</i></summary>
 
->   This guide installs libpng via Homebrew as it is the easiest method, however advanced users can install libpng through other means if they so desire.
+> This guide installs libpng via Homebrew as it is the easiest method, however advanced users can install libpng through other means if they so desire.
 </details>
 
 1. Open the Terminal.
@@ -244,11 +262,13 @@ If this works, then proceed to [Installation](#installation). Otherwise, ask for
     ```bash
     brew install libpng
     ```
+
     libpng is now installed.
 
     Continue to [Installing devkitARM (macOS)](#installing-devkitarm-macos) if **devkitARM is not installed**, otherwise, go to [Choosing where to store pokeemerald (macOS)](#choosing-where-to-store-pokeemerald-macos).
 
 ### Installing devkitARM (macOS)
+
 1. Download the `devkitpro-pacman-installer.pkg` package from [here](https://github.com/devkitPro/pacman/releases).
 2. Open the package to install devkitPro pacman.
 3. In the Terminal, run the following commands to install devkitARM:
@@ -273,55 +293,66 @@ If this works, then proceed to [Installation](#installation). Otherwise, ask for
     ```
 
 ### Choosing where to store pokeemerald (macOS)
+
 At this point, you can choose a folder to store pokeemerald into. If you're okay with storing pokeemerald in the user folder, then proceed to [Installation](#installation). Otherwise, you'll need to account for where pokeemerald is stored when changing directory to the pokeemerald folder.
 
 For example, if you want to store pokeemerald (and agbcc) in **~/Desktop/decomps**, enter this command to **change directory** to the desired folder:
+
 ```bash
 cd Desktop/decomps
 ```
+
 Note that the directory **must exist** in the folder system. If you want to store pokeemerald in a dedicated folder that doesn't exist (e.g. the example provided above), then create the folder (e.g. using Finder) before executing the `cd` command.
 
 <details>
     <summary><i>Note..</i>.</summary>
 
->   Note: If the path has spaces, then the path must be wrapped with quotations, e.g. `cd "Desktop/decomp folder"`
+> Note: If the path has spaces, then the path must be wrapped with quotations, e.g. `cd "Desktop/decomp folder"`
 </details>
 
 If this works, then proceed to [Installation](#installation). Otherwise, ask for help on Discord or IRC (see [README.md](README.md)).
 
 ## Linux
+
 Open Terminal and enter the following commands, depending on which distro you're using.
 
 ### Debian/Ubuntu-based distributions
+
 Run the following command to install the necessary packages:
+
 ```bash
 sudo apt install build-essential binutils-arm-none-eabi git libpng-dev
 ```
+
 Then proceed to [Choosing where to store pokeemerald (Linux)](#choosing-where-to-store-pokeemerald-linux).
 <details>
     <summary><i>Note for legacy repos...</i></summary>
 
->   If the repository you plan to build has an **[older revision of the INSTALL.md](https://github.com/pret/pokeemerald/blob/571c598/INSTALL.md)**,
->   then you will have to install devkitARM. Install all the above packages except binutils-arm-none-eabi, and follow the instructions to
->   [install devkitARM on Debian/Ubuntu-based distributions](#installing-devkitarm-on-debianubuntu-based-distributions).
+> If the repository you plan to build has an **[older revision of the INSTALL.md](https://github.com/pret/pokeemerald/blob/571c598/INSTALL.md)**,
+> then you will have to install devkitARM. Install all the above packages except binutils-arm-none-eabi, and follow the instructions to
+> [install devkitARM on Debian/Ubuntu-based distributions](#installing-devkitarm-on-debianubuntu-based-distributions).
 </details>
 
 ### Arch Linux
+
 Run this command as root to install the necessary packages:
+
 ```bash
 pacman -S base-devel arm-none-eabi-binutils git libpng
 ```
+
 Then proceed to [Choosing where to store pokeemerald (Linux)](#choosing-where-to-store-pokeemerald-linux).
 <details>
     <summary><i>Note for legacy repos...</i></summary>
 
->   If the repository you plan to build has an **[older revision of the INSTALL.md](https://github.com/pret/pokeemerald/blob/571c598/INSTALL.md)**,
->   then you will have to install devkitARM. Install all the above packages except binutils-arm-none-eabi, and follow the instructions to
->   [install devkitARM on Arch Linux](#installing-devkitarm-on-arch-linux).
+> If the repository you plan to build has an **[older revision of the INSTALL.md](https://github.com/pret/pokeemerald/blob/571c598/INSTALL.md)**,
+> then you will have to install devkitARM. Install all the above packages except binutils-arm-none-eabi, and follow the instructions to
+> [install devkitARM on Arch Linux](#installing-devkitarm-on-arch-linux).
 </details>
 
 ### Other distributions
-_(Specific instructions for other distributions would be greatly appreciated!)_
+
+*(Specific instructions for other distributions would be greatly appreciated!)*
 
 1. Try to find the required software in its repositories:
     - `gcc`
@@ -341,6 +372,7 @@ _(Specific instructions for other distributions would be greatly appreciated!)_
     The last command will ask for the selection of packages to install. Just press Enter to install all of them, followed by entering Y to proceed with the installation.
 
 ### Choosing where to store pokeemerald (Linux)
+
 At this point, you can choose a folder to store pokeemerald (and agbcc) into. If so, you'll have to account for the modified folder path when changing directory to the pokeemerald folder.
 
 If this works, then proceed to [Installation](#installation). Otherwise, ask for help on Discord or IRC (see [README.md](README.md)).
@@ -350,9 +382,9 @@ If this works, then proceed to [Installation](#installation). Otherwise, ask for
 <details>
     <summary><i>Note for Windows users...</i></summary>
 
->   Consider adding an exception for the `pokeemerald` and/or `decomps` folder in Windows Security using
->   [these instructions](https://support.microsoft.com/help/4028485). This prevents Microsoft Defender from
->   scanning them which might improve performance while building.
+> Consider adding an exception for the `pokeemerald` and/or `decomps` folder in Windows Security using
+> [these instructions](https://support.microsoft.com/help/4028485). This prevents Microsoft Defender from
+> scanning them which might improve performance while building.
 </details>
 
 1. If pokeemerald is not already downloaded (some users may prefer to download pokeemerald via a git client like GitHub Desktop), run:
@@ -365,16 +397,19 @@ If this works, then proceed to [Installation](#installation). Otherwise, ask for
         <summary><i>Note for WSL1...</i></summary>
 
     >   If you get an error stating `fatal: could not set 'core.filemode' to 'false'`, then run the following commands:
+>
     >   ```bash
     >   cd
     >   sudo umount /mnt/c
     >   sudo mount -t drvfs C: /mnt/c -o metadata,noatime
     >   cd <folder where pokeemerald is to be stored>
     >   ```
-    >   Where *\<folder where pokeemerald is to be stored>* is the path of the folder [where you chose to store pokeemerald](#Choosing-where-to-store-pokeemerald-WSL1). Then run the `git clone` command again.
+>
+    > Where *\<folder where pokeemerald is to be stored>* is the path of the folder [where you chose to store pokeemerald](#choosing-where-to-store-pokeemerald-wsl1). Then run the `git clone` command again.
     </details>
 
 2. Install agbcc into pokeemerald. The commands to run depend on certain conditions. **You should only follow one of the listed instructions**:
+
 - If agbcc has **not been built before** in the folder where you chose to store pokeemerald, run the following commands to build and install it into pokeemerald:
 
     ```bash
@@ -413,15 +448,21 @@ If this works, then proceed to [Installation](#installation). Otherwise, ask for
     ```
 
 Now you're ready to [build **pokeemerald**](#build-pokeemerald)
+
 ## Build pokeemerald
+
 If you aren't in the pokeemerald directory already, then **change directory** to the pokeemerald folder:
+
 ```bash
 cd pokeemerald
 ```
+
 To build **pokeemerald.gba** (Note: to speed up builds, see [Parallel builds](#parallel-builds)):
+
 ```bash
 make
 ```
+
 If it has built successfully you will have the output file **pokeemerald.gba** in your project folder.
 <details>
 <summary>Note for Windows...</summary>
@@ -435,13 +476,17 @@ If it has built successfully you will have the output file **pokeemerald.gba** i
 See [the GNU docs](https://www.gnu.org/software/make/manual/html_node/Parallel.html) and [this Stack Exchange thread](https://unix.stackexchange.com/questions/208568) for more information.
 
 To speed up building, first get the value of `nproc` by running the following command:
+
 ```bash
 nproc
 ```
+
 Builds can then be sped up by running the following command:
+
 ```bash
 make -j<output of nproc>
 ```
+
 Replace `<output of nproc>` with the number that the `nproc` command returned.
 
 `nproc` is not available on macOS. The alternative is `sysctl -n hw.ncpu` ([relevant Stack Overflow thread](https://stackoverflow.com/questions/1715580)).
@@ -449,14 +494,19 @@ Replace `<output of nproc>` with the number that the `nproc` command returned.
 ## Compare ROM to the original
 
 For contributing, or if you'd simply like to verify that your ROM is identical to the original game, run:
+
 ```bash
 make compare
 ```
+
 If it matches, you will see the following at the end of the output:
+
 ```bash
 pokeemerald.gba: OK
 ```
+
 If there are any changes from the original game, you will instead see:
+
 ```bash
 pokeemerald.gba: FAILED
 shasum: WARNING: 1 computed checksum did NOT match
@@ -465,10 +515,13 @@ shasum: WARNING: 1 computed checksum did NOT match
 ## devkitARM's C compiler
 
 This project supports the `arm-none-eabi-gcc` compiler included with devkitARM. If devkitARM (a.k.a. gba-dev) has already been installed as part of the platform-specific instructions, simply run:
+
 ```bash
 make modern
 ```
+
 Otherwise, follow the instructions below to install devkitARM.
+
 ### Installing devkitARM on WSL1
 
 1. `gdebi-core` must be installed beforehand in order to install devkitPro pacman (which facilitates the installation of devkitARM). Install this with the following command:
@@ -476,6 +529,7 @@ Otherwise, follow the instructions below to install devkitARM.
     ```bash
     sudo apt install gdebi-core
     ```
+
     <details>
         <summary><i>Note...</i></summary>
 
@@ -496,6 +550,7 @@ Otherwise, follow the instructions below to install devkitARM.
     sudo dkp-pacman -Sy
     sudo dkp-pacman -S gba-dev
     ```
+
     The last command will ask for the selection of packages to install. Just press Enter to install all of them, followed by entering Y to proceed with the installation.
 
     <details>
@@ -513,11 +568,13 @@ Otherwise, follow the instructions below to install devkitARM.
 devkitARM is now installed.
 
 ### Installing devkitARM on Debian/Ubuntu-based distributions
+
 1. If `gdebi-core` is not installed, run the following command:
 
     ```bash
     sudo apt install gdebi-core
     ```
+
 2. Download the devkitPro pacman package [here](https://github.com/devkitPro/pacman/releases). The file to download is `devkitpro-pacman.amd64.deb`.
 3. Change directory to where the package was downloaded. Then, run the following commands to install devkitARM:
 
@@ -526,6 +583,7 @@ devkitARM is now installed.
     sudo dkp-pacman -Sy
     sudo dkp-pacman -S gba-dev
     ```
+
     The last command will ask for the selection of packages to install. Just press Enter to install all of them, followed by entering Y to proceed with the installation.
 
     > Note: `devkitpro-pacman.amd64.deb` is the expected filename of the devkitPro package downloaded (for the first command). If the downloaded package filename differs, then use that filename instead.
@@ -546,6 +604,7 @@ devkitARM is now installed.
     ```console
     pacman -S gba-dev
     ```
+
     This will ask for the selection of packages to install. Just press Enter to install all of them, followed by entering Y to proceed with the installation.
 
 3. Run the following command to set devkitPro related environment variables (alternatively, close and re-open the Terminal):
@@ -559,25 +618,31 @@ devkitARM is now installed.
 ### Other toolchains
 
 To build using a toolchain other than devkitARM, override the `TOOLCHAIN` environment variable with the path to your toolchain, which must contain the subdirectory `bin`.
+
 ```bash
 make TOOLCHAIN="/path/to/toolchain/here"
 ```
+
 The following is an example:
+
 ```bash
 make TOOLCHAIN="/usr/local/arm-none-eabi"
 ```
+
 To compile the `modern` target with this toolchain, the subdirectories `lib`, `include`, and `arm-none-eabi` must also be present.
 
 ### Building with debug info under a modern toolchain
 
 To build **pokeemerald.elf** with debug symbols under a modern toolchain:
+
 ```bash
 make modern DINFO=1
 ```
+
 Note that this is not necessary for a non-modern build since those are built with debug symbols by default.
 
 # Useful additional tools
 
-* [porymap](https://github.com/huderlem/porymap) for viewing and editing maps
-* [poryscript](https://github.com/huderlem/poryscript) for scripting ([VS Code extension](https://marketplace.visualstudio.com/items?itemName=karathan.poryscript))
-* [Tilemap Studio](https://github.com/Rangi42/tilemap-studio) for viewing and editing tilemaps
+- [porymap](https://github.com/huderlem/porymap) for viewing and editing maps
+- [poryscript](https://github.com/huderlem/poryscript) for scripting ([VS Code extension](https://marketplace.visualstudio.com/items?itemName=karathan.poryscript))
+- [Tilemap Studio](https://github.com/Rangi42/tilemap-studio) for viewing and editing tilemaps
