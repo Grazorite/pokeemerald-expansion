@@ -1149,8 +1149,20 @@ static void Task_ReturnToItemListAfterItemPurchase(u8 taskId)
         PlaySE(SE_SELECT);
 
         // Purchasing 10+ Poke Balls gets the player a Premier Ball
-        if (tItemId == ITEM_POKE_BALL && tItemCount >= 10 && AddBagItem(ITEM_PREMIER_BALL, 1) == TRUE)
-            BuyMenuDisplayMessage(taskId, gText_ThrowInPremierBall, BuyMenuReturnToItemList);
+        if ((ItemId_GetPocket(tItemId) == POCKET_POKE_BALLS) && tItemCount > 9 && AddBagItem(ITEM_PREMIER_BALL, tItemCount / 10) == TRUE)
+            if (tItemCount > 19)
+                {
+                    BuyMenuDisplayMessage(taskId, gText_ThrowInPremierBalls, BuyMenuReturnToItemList);
+                }
+                else
+                {
+                    BuyMenuDisplayMessage(taskId, gText_ThrowInPremierBall, BuyMenuReturnToItemList);
+                }
+        else if((ItemId_GetPocket(tItemId) == POCKET_TM_HM))
+            {
+                RedrawListMenu(tListTaskId);
+                BuyMenuReturnToItemList(taskId);
+            }
         else
             BuyMenuReturnToItemList(taskId);
     }
@@ -1183,7 +1195,7 @@ static void BuyMenuPrintItemQuantityAndPrice(u8 taskId)
     s16 *data = gTasks[taskId].data;
 
     FillWindowPixelBuffer(WIN_QUANTITY_PRICE, PIXEL_FILL(1));
-    PrintMoneyAmount(4, 32, 1, sShopData->totalCost, OPTIONS_TEXT_SPEED_FAST);
+    PrintMoneyAmount(4, 26, 1, sShopData->totalCost, OPTIONS_TEXT_SPEED_FAST);
     ConvertIntToDecimalStringN(gStringVar1, tItemCount, STR_CONV_MODE_LEADING_ZEROS, BAG_ITEM_CAPACITY_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_xVar1);
     BuyMenuPrint(WIN_QUANTITY_PRICE, gStringVar4, 0, 1, 0, COLORID_NORMAL);

@@ -10,7 +10,7 @@
 #include "strings.h"
 #include "decompress.h"
 
-#define MAX_MONEY 9999999
+#define MAX_MONEY 99999999
 
 EWRAM_DATA static u8 sMoneyBoxWindowId = 0;
 EWRAM_DATA static u8 sMoneyLabelSpriteId = 0;
@@ -132,7 +132,7 @@ void SubtractMoneyFromVar0x8005(void)
 
 void PrintMoneyAmountInMoneyBox(u8 windowId, int amount, u8 speed)
 {
-    PrintMoneyAmount(windowId, 0x1A, 1, amount, speed);
+    PrintMoneyAmount(windowId, 26, 1, amount, speed);
 }
 
 void PrintMoneyAmount(u8 windowId, u8 x, u8 y, int amount, u8 speed)

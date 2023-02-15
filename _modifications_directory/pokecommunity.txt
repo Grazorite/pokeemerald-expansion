@@ -9,74 +9,52 @@ modifications added:
 - Editing Default Options Settings: https://www.pokecommunity.com/showpost.php?p=9967853&postcount=5
 - Reusable TMs: https://www.pokecommunity.com/showpost.php?p=10209376
     - unsellable TMs: 'Task_ItemContext_Sell' found in src\item_menu.c BUT unable to find 'gBagPositionStruct'
+- Wrapping Summary Screen: https://www.pokecommunity.com/showpost.php?p=10060875&postcount=27
+- "Move Pokémon" as first PSS option: https://www.pokecommunity.com/showpost.php?p=10065761
+- Move Item (many renamed methods, follow the below links to update): https://www.pokecommunity.com/showpost.php?p=10120157
+    - https://www.pokecommunity.com/showpost.php?p=10370249#post10370249
+    - https://www.pokecommunity.com/showpost.php?p=10517557#post10517557
+    - https://www.pokecommunity.com/showpost.php?p=10587921#post10587921
+    - https://www.pokecommunity.com/showpost.php?p=10588071#post10588071
+- Nicknaming as an option in the Pokémon Party Screen + Bugfix + Improvements: https://www.pokecommunity.com/showpost.php?p=10120389#post10120389
+- Showing IVs/EVs in Summary Screen: https://www.pokecommunity.com/showpost.php?p=10161688#post10161688
+- Show Type Effectiveness In-Battle: https://www.pokecommunity.com/showpost.php?p=10167016#post10167016
+    - https://www.pokecommunity.com/showpost.php?p=10582554#post10582554
+    - the dictionaries pasted in src\battle_messages.c & src\battle_bg.c should be assigned to keys, i.e. [24], [25], [26]
+    - 'gStandardBattleWindowTemplates' is now 'sStandardBattleWindowTemplates'
+    - MoveSelectionDisplayMoveType(void) found in src\battle_controller_player.c
+    - 'sTypeEffectivenessTable' replaces existing one in src\battle_util.c
+- 
 
 [Item]:
 - Editing Player PC Items: https://www.pokecommunity.com/showpost.php?p=9962254&postcount=2
-- Changing the Beginning Amount of Money: https://www.pokecommunity.com/showthread.php?p=9967852#post9967852
+- Changing the Beginning Amount of Money: https://www.pokecommunity.com/showpost.php?p=9967852#post9967852
+- Modifying the move of a TM/HM: https://www.pokecommunity.com/showpost.php?p=10140674#post10140674
+- Faster berry interactions: https://www.pokecommunity.com/showpost.php?p=10164065#post10164065
+- 
 
 [Scripting]:
+- Berry Trees No Longer Disappear: https://www.pokecommunity.com/showpost.php?p=10142996#post10142996
+    - change 'growthSparkle' to 'stopGrowth'
 - 
 
 [Overworld]:
+- Let a Pokémon forget any move they know: https://www.pokecommunity.com/showpost.php?p=10182839&postcount=119
+    - https://www.pokecommunity.com/showpost.php?p=10232764&postcount=185
 - 
 
 [Graphics]:
 - Changing Birch's Intro Pokémon: https://www.pokecommunity.com/showpost.php?p=9967857&postcount=6
+- 
 
 [Battling]:
+- Set Trainer's Levels Dynamically: https://www.pokecommunity.com/showpost.php?p=10099773
+- Set Wild Pokémon's Levels Dynamically: https://www.pokecommunity.com/showpost.php?p=10100138
+- Always inherit nature when holding an Everstone: https://www.pokecommunity.com/showpost.php?p=10160374#post10160374
 - 
 
 [Code]:
 - 
-
-
-7.  Money Limit
-    - https://www.pokecommunity.com/showthread.php?p=9986063#post9986063
-
-8. Trainer Class-Based Poké Balls
-    - https://www.pokecommunity.com/showthread.php?p=10038105#post10038105
-    - change 'TRAINER_CLASS_PKMN_TRAINER_3' to 'TRAINER_CLASS_PKMN_TRAINER_1'
-
-9. Wrapping Summary Screen
-    - https://www.pokecommunity.com/showthread.php?p=10060875#post10060875
-
-10. "Move Pokémon" as first PSS option
-    - https://www.pokecommunity.com/showthread.php?p=10065761#post10065761
-
-11. Set Trainer's Levels Dynamically
-    - https://www.pokecommunity.com/showthread.php?p=10097529#post10097529
-
-12. Set Wild Pokémon's Levels Dynamically
-    - https://www.pokecommunity.com/showthread.php?p=10100138#post10100138
-
-13. Move Item
-    - https://www.pokecommunity.com/showthread.php?p=10120157#post10120157
-    - https://www.pokecommunity.com/showthread.php?p=10370249#post10370249
-    - https://www.pokecommunity.com/showthread.php?p=10517557#post10517557
-    - https://www.pokecommunity.com/showthread.php?p=10587921#post10587921
-    - https://www.pokecommunity.com/showthread.php?p=10588071#post10588071
-
-14. Nicknaming as an option in the Pokémon Party Screen + Bugfix + Improvements
-    - https://www.pokecommunity.com/showthread.php?p=10120389#post10120389
-
-15. Modifying the move of a TM/HM
-    - https://www.pokecommunity.com/showthread.php?p=10140674#post10140674
-
-16. Berry Trees No Longer Disappear
-    - https://www.pokecommunity.com/showthread.php?p=10142996#post10142996
-    - change 'growthSparkle' to 'stopGrowth'
-
-17. Faster berry interactions
-    - https://www.pokecommunity.com/showthread.php?p=10164065#post10164065
-
-18. Always inherit nature when holding an Everstone
-    - https://www.pokecommunity.com/showthread.php?p=10160374#post10160374
-
-19. Showing IVs/EVs in Summary Screen
-    - https://www.pokecommunity.com/showthread.php?p=10161688#post10161688
-
-20. 
-    - 
 
 
 
@@ -107,5 +85,11 @@ git remote + pull feature branches: (currently not implemented)
 
 8. Bag Sorting
     - https://www.pokecommunity.com/showthread.php?p=10167488#post10167488
+
+9. Plural giveitem
+    - https://www.pokecommunity.com/showthread.php?p=10177314#post10177314
+
+10. Let the Player only buy TMs and HMs once
+    - https://www.pokecommunity.com/showthread.php?p=10182590#post10182590
 
 

@@ -2,21 +2,27 @@ all tutorials/modifications can be found at: https://github.com/pret/pokeemerald
 
 modifications added:
 [Bugs]
+- Fix Snow Weather: https://github.com/pret/pokeemerald/wiki/Fix-Snow-Weather
 - 
 
 [UI]:
 - Colored stats by nature in summary screen: https://github.com/pret/pokeemerald/wiki/Colored-stats-by-nature-in-summary-screen
+- 
 
 [Item]:
+- Increase money limit: https://github.com/pret/pokeemerald/wiki/Increase-money-limit
+- LGPE Style Bonus Premier Balls: https://github.com/pret/pokeemerald/wiki/LGPE-Style-Bonus-Premier-Balls
 - 
 
 [Scripting]:
 - 
 
 [Overworld]:
+- Pokecenters Disregard Eggs: https://github.com/pret/pokeemerald/wiki/Pokecenters-Disregard-Eggs
 - 
 
 [Graphics]:
+- Trainer Class Based Poké Balls: https://github.com/pret/pokeemerald/wiki/Trainer-Class-Based-Pok%C3%A9-Balls
 - 
 
 [Battling]:

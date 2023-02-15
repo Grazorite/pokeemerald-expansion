@@ -377,7 +377,7 @@ const struct TrainerBall gTrainerBallTable[] = {
     {TRAINER_CLASS_TWINS, ITEM_POKE_BALL},
     {TRAINER_CLASS_SAILOR, ITEM_DIVE_BALL},
     {TRAINER_CLASS_COLLECTOR, ITEM_REPEAT_BALL},
-    {TRAINER_CLASS_PKMN_TRAINER_1, ITEM_PREMIER_BALL},
+    {TRAINER_CLASS_RIVAL, ITEM_PREMIER_BALL},
     {TRAINER_CLASS_PKMN_BREEDER, ITEM_TIMER_BALL},
     {TRAINER_CLASS_PKMN_RANGER, ITEM_SAFARI_BALL},
     {TRAINER_CLASS_TEAM_MAGMA, ITEM_NEST_BALL},
@@ -2174,6 +2174,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             }
             }
             
+            // Trainer Class Based Poké Balls
             for (j = 0; gTrainerBallTable[j].classId != 0xFF; j++)
             {
                 if (gTrainerBallTable[j].classId == gTrainers[trainerNum].trainerClass)
