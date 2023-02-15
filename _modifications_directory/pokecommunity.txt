@@ -24,6 +24,13 @@ modifications added:
     - 'gStandardBattleWindowTemplates' is now 'sStandardBattleWindowTemplates'
     - MoveSelectionDisplayMoveType(void) found in src\battle_controller_player.c
     - 'sTypeEffectivenessTable' replaces existing one in src\battle_util.c
+- Lower case after first input in the naming screen: https://www.pokecommunity.com/showpost.php?p=10199896&postcount=139
+- Change bag sound with the ones from FR: https://www.pokecommunity.com/showpost.php?p=10205757
+- Change order of genders in New Game: https://www.pokecommunity.com/showpost.php?p=10217558&postcount=171
+- Remove the Low Health Beep: https://www.pokecommunity.com/showpost.php?p=10246778&postcount=194
+- Make text speed-up like holding the A/B buttons automatically: https://www.pokecommunity.com/showpost.php?p=10266385
+- Hidden Power type in summary screen: https://www.pokecommunity.com/showpost.php?p=10269132
+- Have the game display Hidden Power's true base power (for pre - Gen VI power calculations): https://www.pokecommunity.com/showpost.php?p=10269828
 - 
 
 [Item]:
@@ -31,6 +38,7 @@ modifications added:
 - Changing the Beginning Amount of Money: https://www.pokecommunity.com/showpost.php?p=9967852#post9967852
 - Modifying the move of a TM/HM: https://www.pokecommunity.com/showpost.php?p=10140674#post10140674
 - Faster berry interactions: https://www.pokecommunity.com/showpost.php?p=10164065#post10164065
+    - https://www.pokecommunity.com/showpost.php?p=10261366#post10261366
 - 
 
 [Scripting]:
@@ -80,8 +88,8 @@ git remote + pull feature branches: (currently not implemented)
     - https://www.pokecommunity.com/showthread.php?p=10161076#post10161076
     - https://www.pokecommunity.com/showthread.php?p=10161111#post10161111
 
-7. DPPt Bike (a 2-in-1 Bike)
-    - https://www.pokecommunity.com/showthread.php?p=10161144#post10161144
+7. DPPt Bike (a 2-in-1 Bike) (Alterntive Take)
+    - https://www.pokecommunity.com/showthread.php?p=10217718#post10217718
 
 8. Bag Sorting
     - https://www.pokecommunity.com/showthread.php?p=10167488#post10167488
@@ -92,4 +100,17 @@ git remote + pull feature branches: (currently not implemented)
 10. Let the Player only buy TMs and HMs once
     - https://www.pokecommunity.com/showthread.php?p=10182590#post10182590
 
+11. Rock Climb
+    - https://www.pokecommunity.com/showthread.php?p=10202403#post10202403
 
+12. Grindrunning For Easier Diagonal Movement
+    - https://www.pokecommunity.com/showthread.php?p=10202986#post10202986
+
+13. Omnidirectional Jumping
+    - https://www.pokecommunity.com/showthread.php?p=10212519#post10212519
+
+14. DS-Style party screen (2 versions)
+    - https://www.pokecommunity.com/showthread.php?p=10218092#post10218092
+
+15. Fully functional debug menu with Flags, Vars, Items, custom scripts, Pokemon and more!
+    - 

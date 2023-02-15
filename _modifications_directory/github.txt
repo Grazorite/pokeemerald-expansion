@@ -3,10 +3,13 @@ all tutorials/modifications can be found at: https://github.com/pret/pokeemerald
 modifications added:
 [Bugs]
 - Fix Snow Weather: https://github.com/pret/pokeemerald/wiki/Fix-Snow-Weather
+- Surfing Dismount Ground Effects: https://github.com/pret/pokeemerald/wiki/Surfing-Dismount-Ground-Effects
 - 
 
 [UI]:
 - Colored stats by nature in summary screen: https://github.com/pret/pokeemerald/wiki/Colored-stats-by-nature-in-summary-screen
+- Repeated Field Medicine Use: https://github.com/pret/pokeemerald/wiki/Repeated-Field-Medicine-Use
+- Removing the extra save confirmation: https://github.com/pret/pokeemerald/wiki/Remove-the-extra-save-confirmation
 - 
 
 [Item]:
@@ -19,6 +22,7 @@ modifications added:
 
 [Overworld]:
 - Pokecenters Disregard Eggs: https://github.com/pret/pokeemerald/wiki/Pokecenters-Disregard-Eggs
+- Speedy Nurse Joy: https://github.com/pret/pokeemerald/wiki/Speedy-Nurse-Joy
 - 
 
 [Graphics]:
@@ -35,3 +39,9 @@ modifications added:
 
 all feature branches can be found at: https://github.com/pret/pokeemerald/wiki/Feature-Branches
 
+Stair Warps: https://github.com/pret/pokeemerald/wiki/Stair-Warps
+
+ALREADY IMPLEMENTED:
+- [Battling] Obtain exp. points per catch: https://www.pokecommunity.com/showpost.php?p=10209772
+- [Bugs] Seeding the RNG properly on startup: https://www.pokecommunity.com/showpost.php?p=10211666&postcount=155
+- 
