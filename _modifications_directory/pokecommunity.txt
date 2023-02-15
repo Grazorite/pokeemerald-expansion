@@ -1,0 +1,111 @@
+all simple modifications can be found at: https://www.pokecommunity.com/showthread.php?t=416647
+
+modifications added:
+[Bugs]
+- 
+
+[UI]:
+- Modifying Starter Pokémon: https://www.pokecommunity.com/showpost.php?p=9962255&postcount=3
+- Editing Default Options Settings: https://www.pokecommunity.com/showpost.php?p=9967853&postcount=5
+- Reusable TMs: https://www.pokecommunity.com/showpost.php?p=10209376
+    - unsellable TMs: 'Task_ItemContext_Sell' found in src\item_menu.c BUT unable to find 'gBagPositionStruct'
+
+[Item]:
+- Editing Player PC Items: https://www.pokecommunity.com/showpost.php?p=9962254&postcount=2
+- Changing the Beginning Amount of Money: https://www.pokecommunity.com/showthread.php?p=9967852#post9967852
+
+[Scripting]:
+- 
+
+[Overworld]:
+- 
+
+[Graphics]:
+- Changing Birch's Intro Pokémon: https://www.pokecommunity.com/showpost.php?p=9967857&postcount=6
+
+[Battling]:
+- 
+
+[Code]:
+- 
+
+
+7.  Money Limit
+    - https://www.pokecommunity.com/showthread.php?p=9986063#post9986063
+
+8. Trainer Class-Based Poké Balls
+    - https://www.pokecommunity.com/showthread.php?p=10038105#post10038105
+    - change 'TRAINER_CLASS_PKMN_TRAINER_3' to 'TRAINER_CLASS_PKMN_TRAINER_1'
+
+9. Wrapping Summary Screen
+    - https://www.pokecommunity.com/showthread.php?p=10060875#post10060875
+
+10. "Move Pokémon" as first PSS option
+    - https://www.pokecommunity.com/showthread.php?p=10065761#post10065761
+
+11. Set Trainer's Levels Dynamically
+    - https://www.pokecommunity.com/showthread.php?p=10097529#post10097529
+
+12. Set Wild Pokémon's Levels Dynamically
+    - https://www.pokecommunity.com/showthread.php?p=10100138#post10100138
+
+13. Move Item
+    - https://www.pokecommunity.com/showthread.php?p=10120157#post10120157
+    - https://www.pokecommunity.com/showthread.php?p=10370249#post10370249
+    - https://www.pokecommunity.com/showthread.php?p=10517557#post10517557
+    - https://www.pokecommunity.com/showthread.php?p=10587921#post10587921
+    - https://www.pokecommunity.com/showthread.php?p=10588071#post10588071
+
+14. Nicknaming as an option in the Pokémon Party Screen + Bugfix + Improvements
+    - https://www.pokecommunity.com/showthread.php?p=10120389#post10120389
+
+15. Modifying the move of a TM/HM
+    - https://www.pokecommunity.com/showthread.php?p=10140674#post10140674
+
+16. Berry Trees No Longer Disappear
+    - https://www.pokecommunity.com/showthread.php?p=10142996#post10142996
+    - change 'growthSparkle' to 'stopGrowth'
+
+17. Faster berry interactions
+    - https://www.pokecommunity.com/showthread.php?p=10164065#post10164065
+
+18. Always inherit nature when holding an Everstone
+    - https://www.pokecommunity.com/showthread.php?p=10160374#post10160374
+
+19. Showing IVs/EVs in Summary Screen
+    - https://www.pokecommunity.com/showthread.php?p=10161688#post10161688
+
+20. 
+    - 
+
+
+
+git remote + pull feature branches: (currently not implemented)
+
+1. Gen. 6 styled Exp. Share
+    - https://www.pokecommunity.com/showthread.php?p=10060538#post10060538
+    - 
+
+2. Overworld 1HP Poison Survival
+    - https://www.pokecommunity.com/showthread.php?p=10068565#post10068565
+
+3. Item Descriptions On First Obtain
+    - https://www.pokecommunity.com/showthread.php?p=10126502#post10126502
+
+4. Register Items with LR
+    - https://www.pokecommunity.com/showthread.php?p=10134388#post10134388
+
+5. FRLG / Gen IV and Onwards White Out Money Calculation (with messages)
+    - https://www.pokecommunity.com/showthread.php?p=10137272#post10137272
+
+6. Auto-Run
+    - https://www.pokecommunity.com/showthread.php?p=10161076#post10161076
+    - https://www.pokecommunity.com/showthread.php?p=10161111#post10161111
+
+7. DPPt Bike (a 2-in-1 Bike)
+    - https://www.pokecommunity.com/showthread.php?p=10161144#post10161144
+
+8. Bag Sorting
+    - https://www.pokecommunity.com/showthread.php?p=10167488#post10167488
+
+

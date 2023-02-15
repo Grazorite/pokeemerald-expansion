@@ -659,6 +659,7 @@ struct
 } static const sCursorOptions[] =
 {
     [MENU_SUMMARY] = {gText_Summary5, CursorCb_Summary},
+    [MENU_NICKNAME] = {gText_Nickname, CursorCb_Nickname},
     [MENU_SWITCH] = {gText_Switch2, CursorCb_Switch},
     [MENU_CANCEL1] = {gText_Cancel2, CursorCb_Cancel1},
     [MENU_ITEM] = {gText_Item, CursorCb_Item},
@@ -1107,11 +1108,11 @@ static const u8 *const sUnused_StatStrings[] =
 
 static const u16 sTMHMMoves[] =
 {
-    [ITEM_TM01 - ITEM_TM01] = MOVE_FOCUS_PUNCH,
-    [ITEM_TM02 - ITEM_TM01] = MOVE_DRAGON_CLAW,
-    [ITEM_TM03 - ITEM_TM01] = MOVE_WATER_PULSE,
+    [ITEM_TM01 - ITEM_TM01] = MOVE_FIRE_PUNCH,
+    [ITEM_TM02 - ITEM_TM01] = MOVE_ICE_PUNCH,
+    [ITEM_TM03 - ITEM_TM01] = MOVE_THUNDER_PUNCH,
     [ITEM_TM04 - ITEM_TM01] = MOVE_CALM_MIND,
-    [ITEM_TM05 - ITEM_TM01] = MOVE_ROAR,
+    [ITEM_TM05 - ITEM_TM01] = MOVE_OUTRAGE,
     [ITEM_TM06 - ITEM_TM01] = MOVE_TOXIC,
     [ITEM_TM07 - ITEM_TM01] = MOVE_HAIL,
     [ITEM_TM08 - ITEM_TM01] = MOVE_BULK_UP,

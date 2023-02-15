@@ -1,0 +1,31 @@
+all tutorials/modifications can be found at: https://github.com/pret/pokeemerald/wiki/Tutorials
+
+modifications added:
+[Bugs]
+- 
+
+[UI]:
+- Colored stats by nature in summary screen: https://github.com/pret/pokeemerald/wiki/Colored-stats-by-nature-in-summary-screen
+
+[Item]:
+- 
+
+[Scripting]:
+- 
+
+[Overworld]:
+- 
+
+[Graphics]:
+- 
+
+[Battling]:
+- 
+
+[Code]:
+- 
+
+
+
+all feature branches can be found at: https://github.com/pret/pokeemerald/wiki/Feature-Branches
+
