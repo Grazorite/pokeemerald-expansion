@@ -1,6 +1,12 @@
 #ifndef GUARD_BATTLE_MAIN_H
 #define GUARD_BATTLE_MAIN_H
 
+struct TrainerBall
+{
+    u8 classId;
+    u16 Ball; // make this a u8 if needed
+};
+
 struct TrainerMoney
 {
     u8 classId;

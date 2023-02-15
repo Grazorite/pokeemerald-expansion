@@ -22,12 +22,34 @@ modifications added:
 7.  Money Limit
     - https://www.pokecommunity.com/showthread.php?p=9986063#post9986063
 
-8. 
-    - 
+8. Trainer Class-Based Poké Balls
+    - https://www.pokecommunity.com/showthread.php?p=10038105#post10038105
+    - change TRAINER_CLASS_PKMN_TRAINER_3 to TRAINER_CLASS_PKMN_TRAINER_1
 
-9. 
-    - 
+9. Wrapping Summary Screen
+    - https://www.pokecommunity.com/showthread.php?p=10060875#post10060875
 
-10. 
-    - 
+10. "Move Pokémon" as first PSS option
+    - https://www.pokecommunity.com/showthread.php?p=10065761#post10065761
+
+11. Set Trainer's Levels Dynamically
+    - https://www.pokecommunity.com/showthread.php?p=10097529#post10097529
+
+12. Set Wild Pokémon's Levels Dynamically
+    - https://www.pokecommunity.com/showthread.php?p=10100138#post10100138
+
+13. Move Item
+    - https://www.pokecommunity.com/showthread.php?p=10120157#post10120157
+    - https://www.pokecommunity.com/showthread.php?p=10370249#post10370249
+    - https://www.pokecommunity.com/showthread.php?p=10517557#post10517557
+    - https://www.pokecommunity.com/showthread.php?p=10587921#post10587921
+    - https://www.pokecommunity.com/showthread.php?p=10588071#post10588071
+
+13. Gen. 6 styled Exp. Share
+    - https://www.pokecommunity.com/showthread.php?p=10060538#post10060538
+    - git remote + pull feature branch
+
+14. Overworld 1HP Poison Survival
+    - https://www.pokecommunity.com/showthread.php?p=10068565#post10068565
+    - git remote + pull feature branch
 
