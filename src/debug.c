@@ -105,6 +105,7 @@ enum { // Flags
     DEBUG_FLAG_MENU_ITEM_FLYANYWHERE,
     DEBUG_FLAG_MENU_ITEM_GETALLBADGES,
     DEBUG_FLAG_MENU_ITEM_FRONTIER_PASS,
+    DEBUG_FLAG_MENU_ITEM_TOGGLE_BATTLE_DMG,
     DEBUG_FLAG_MENU_ITEM_COLISSION_ONOFF,
     DEBUG_FLAG_MENU_ITEM_ENCOUNTER_ONOFF,
     DEBUG_FLAG_MENU_ITEM_TRAINER_SEE_ONOFF,
@@ -235,6 +236,7 @@ static void DebugAction_Flags_SwitchPokeNav(u8 taskId);
 static void DebugAction_Flags_ToggleFlyFlags(u8 taskId);
 static void DebugAction_Flags_ToggleBadgeFlags(u8 taskId);
 static void DebugAction_Flags_ToggleFrontierPass(u8 taskId);
+static void DebugAction_Flags_BattleDmgOnOff(u8 taskId);
 static void DebugAction_Flags_CollisionOnOff(u8 taskId);
 static void DebugAction_Flags_EncounterOnOff(u8 taskId);
 static void DebugAction_Flags_TrainerSeeOnOff(u8 taskId);
@@ -338,6 +340,7 @@ static const u8 sDebugText_Flags_SwitchPokeNav[] =      _("PokéNav ON/OFF");
 static const u8 sDebugText_Flags_ToggleFlyFlags[] =     _("Fly Flags ON/OFF");
 static const u8 sDebugText_Flags_ToggleAllBadges[] =    _("All badges ON/OFF");
 static const u8 sDebugText_Flags_ToggleFrontierPass[] = _("Frontier Pass ON/OFF");
+static const u8 sDebugText_Flags_BattleDmg[] =          _("Toggle {STR_VAR_1}BattleDmg OFF");
 static const u8 sDebugText_Flags_SwitchCollision[] =    _("Collision ON/OFF");
 static const u8 sDebugText_Flags_SwitchEncounter[] =    _("Encounter ON/OFF");
 static const u8 sDebugText_Flags_SwitchTrainerSee[] =   _("TrainerSee ON/OFF");
@@ -472,6 +475,7 @@ static const struct ListMenuItem sDebugMenu_Items_Flags[] =
     [DEBUG_FLAG_MENU_ITEM_FLYANYWHERE]       = {sDebugText_Flags_ToggleFlyFlags,     DEBUG_FLAG_MENU_ITEM_FLYANYWHERE},
     [DEBUG_FLAG_MENU_ITEM_GETALLBADGES]      = {sDebugText_Flags_ToggleAllBadges,    DEBUG_FLAG_MENU_ITEM_GETALLBADGES},
     [DEBUG_FLAG_MENU_ITEM_FRONTIER_PASS]     = {sDebugText_Flags_ToggleFrontierPass, DEBUG_FLAG_MENU_ITEM_FRONTIER_PASS},
+    [DEBUG_FLAG_MENU_ITEM_TOGGLE_BATTLE_DMG] = {sDebugText_Flags_BattleDmg,          DEBUG_FLAG_MENU_ITEM_TOGGLE_BATTLE_DMG},
     [DEBUG_FLAG_MENU_ITEM_COLISSION_ONOFF]   = {sDebugText_Flags_SwitchCollision,    DEBUG_FLAG_MENU_ITEM_COLISSION_ONOFF},
     [DEBUG_FLAG_MENU_ITEM_ENCOUNTER_ONOFF]   = {sDebugText_Flags_SwitchEncounter,    DEBUG_FLAG_MENU_ITEM_ENCOUNTER_ONOFF},
     [DEBUG_FLAG_MENU_ITEM_TRAINER_SEE_ONOFF] = {sDebugText_Flags_SwitchTrainerSee,   DEBUG_FLAG_MENU_ITEM_TRAINER_SEE_ONOFF},
@@ -551,6 +555,7 @@ static void (*const sDebugMenu_Actions_Flags[])(u8) =
     [DEBUG_FLAG_MENU_ITEM_FLYANYWHERE]       = DebugAction_Flags_ToggleFlyFlags,
     [DEBUG_FLAG_MENU_ITEM_GETALLBADGES]      = DebugAction_Flags_ToggleBadgeFlags,
     [DEBUG_FLAG_MENU_ITEM_FRONTIER_PASS]     = DebugAction_Flags_ToggleFrontierPass,
+    [DEBUG_FLAG_MENU_ITEM_TOGGLE_BATTLE_DMG] = DebugAction_Flags_BattleDmgOnOff,
     [DEBUG_FLAG_MENU_ITEM_COLISSION_ONOFF]   = DebugAction_Flags_CollisionOnOff,
     [DEBUG_FLAG_MENU_ITEM_ENCOUNTER_ONOFF]   = DebugAction_Flags_EncounterOnOff,
     [DEBUG_FLAG_MENU_ITEM_TRAINER_SEE_ONOFF] = DebugAction_Flags_TrainerSeeOnOff,
@@ -1553,6 +1558,14 @@ static void DebugAction_Flags_ToggleFrontierPass(u8 taskId)
     else
         PlaySE(SE_PC_LOGIN);
     FlagToggle(FLAG_SYS_FRONTIER_PASS);
+}
+static void DebugAction_Flags_BattleDmgOnOff(u8 taskId)
+{
+    if (FlagGet(FLAG_SYS_NO_BATTLE_DMG))
+        PlaySE(SE_PC_OFF);
+    else
+        PlaySE(SE_PC_LOGIN);
+    FlagToggle(FLAG_SYS_NO_BATTLE_DMG);
 }
 static void DebugAction_Flags_CollisionOnOff(u8 taskId)
 {

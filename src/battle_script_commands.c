@@ -59,6 +59,8 @@
 #include "constants/trainers.h"
 #include "battle_util.h"
 #include "constants/pokemon.h"
+#include "constants/flags.h"
+#include "debug.h"
 
 extern struct Evolution gEvolutionTable[][EVOS_PER_MON];
 
@@ -2312,6 +2314,14 @@ static void Cmd_waitanimation(void)
 
 static void Cmd_healthbarupdate(void)
 {
+    #if TX_DEBUG_SYSTEM_ENABLE == TRUE
+    u8 side = GetBattlerSide(gBattlerTarget);
+    if (FlagGet(FLAG_SYS_NO_BATTLE_DMG) && side == B_SIDE_PLAYER)
+    {
+        gMoveResultFlags |= MOVE_RESULT_NO_EFFECT;
+    }
+    #endif
+
     if (gBattleControllerExecFlags)
         return;
 

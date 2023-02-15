@@ -2,6 +2,8 @@ all simple modifications can be found at: https://www.pokecommunity.com/showthre
 
 modifications added:
 [Bugs]
+- Wrong Save Type Error Screen: https://www.pokecommunity.com/showpost.php?p=10449518
+- Restoring the Shred Split Battle Transition: https://www.pokecommunity.com/showpost.php?p=10449556
 - 
 
 [UI]:
@@ -18,6 +20,7 @@ modifications added:
     - https://www.pokecommunity.com/showpost.php?p=10588071#post10588071
 - Nicknaming as an option in the Pokémon Party Screen + Bugfix + Improvements: https://www.pokecommunity.com/showpost.php?p=10120389#post10120389
 - Showing IVs/EVs in Summary Screen: https://www.pokecommunity.com/showpost.php?p=10161688#post10161688
+    - https://www.pokecommunity.com/showpost.php?p=10410302#post10410302
 - Show Type Effectiveness In-Battle: https://www.pokecommunity.com/showpost.php?p=10167016#post10167016
     - https://www.pokecommunity.com/showpost.php?p=10582554#post10582554
     - the dictionaries pasted in src\battle_messages.c & src\battle_bg.c should be assigned to keys, i.e. [24], [25], [26]
@@ -31,6 +34,9 @@ modifications added:
 - Make text speed-up like holding the A/B buttons automatically: https://www.pokecommunity.com/showpost.php?p=10266385
 - Hidden Power type in summary screen: https://www.pokecommunity.com/showpost.php?p=10269132
 - Have the game display Hidden Power's true base power (for pre - Gen VI power calculations): https://www.pokecommunity.com/showpost.php?p=10269828
+- Increase Text Speed Beyond Fast: https://www.pokecommunity.com/showpost.php?p=10400198
+- Swap party screen slots using Select: https://www.pokecommunity.com/showpost.php?p=10420662
+- Remove Map Popups On Maps With The Same Map Section: https://www.pokecommunity.com/showpost.php?p=10449889
 - 
 
 [Item]:
@@ -39,6 +45,9 @@ modifications added:
 - Modifying the move of a TM/HM: https://www.pokecommunity.com/showpost.php?p=10140674#post10140674
 - Faster berry interactions: https://www.pokecommunity.com/showpost.php?p=10164065#post10164065
     - https://www.pokecommunity.com/showpost.php?p=10261366#post10261366
+- Remove the need to water berries on rainy Routes: https://www.pokecommunity.com/showpost.php?p=10349397&postcount=258
+    - https://www.pokecommunity.com/showthread.php?p=10431299#post10431299
+- Feed any number of pokéblocks: https://www.pokecommunity.com/showpost.php?p=10364627
 - 
 
 [Scripting]:
@@ -49,6 +58,10 @@ modifications added:
 [Overworld]:
 - Let a Pokémon forget any move they know: https://www.pokecommunity.com/showpost.php?p=10182839&postcount=119
     - https://www.pokecommunity.com/showpost.php?p=10232764&postcount=185
+- Making Pokémon with Poison Heal be unaffected by poison in the overworld: https://www.pokecommunity.com/showpost.php?p=10349195&postcount=256
+- Allow player to change direction while moving: https://www.pokecommunity.com/showpost.php?p=10402610
+- Fast Surfing: https://www.pokecommunity.com/showpost.php?p=10137446&postcount=59
+    - https://www.pokecommunity.com/showpost.php?p=10457096#post10457096
 - 
 
 [Graphics]:
@@ -59,6 +72,7 @@ modifications added:
 - Set Trainer's Levels Dynamically: https://www.pokecommunity.com/showpost.php?p=10099773
 - Set Wild Pokémon's Levels Dynamically: https://www.pokecommunity.com/showpost.php?p=10100138
 - Always inherit nature when holding an Everstone: https://www.pokecommunity.com/showpost.php?p=10160374#post10160374
+- Create Pokémon with Three Perfect IVs: https://www.pokecommunity.com/showpost.php?p=10410959
 - 
 
 [Code]:
@@ -112,5 +126,18 @@ git remote + pull feature branches: (currently not implemented)
 14. DS-Style party screen (2 versions)
     - https://www.pokecommunity.com/showthread.php?p=10218092#post10218092
 
-15. Fully functional debug menu with Flags, Vars, Items, custom scripts, Pokemon and more!
-    - 
+15. Improved scrolling options menu with faster text, HP and EXP bar speeds and a metric unit option!
+    - https://www.pokecommunity.com/showthread.php?p=10275248#post10275248
+
+16. Wonder Trade
+    - https://www.pokecommunity.com/showthread.php?p=10357573#post10357573
+
+17. TM Case ported from FR and custom one!
+    - https://www.pokecommunity.com/showthread.php?p=10378278#post10378278
+
+18. Register items in a list menu!
+    - https://www.pokecommunity.com/showthread.php?p=10380770#post10380770
+
+
+
+

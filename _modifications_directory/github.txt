@@ -10,6 +10,8 @@ modifications added:
 - Colored stats by nature in summary screen: https://github.com/pret/pokeemerald/wiki/Colored-stats-by-nature-in-summary-screen
 - Repeated Field Medicine Use: https://github.com/pret/pokeemerald/wiki/Repeated-Field-Medicine-Use
 - Removing the extra save confirmation: https://github.com/pret/pokeemerald/wiki/Remove-the-extra-save-confirmation
+- Add Ability to Avoid Battle Damage in Debug Menu: https://github.com/pret/pokeemerald/wiki/Add-Ability-to-Avoid-Battle-Damage-in-Debug-Menu
+    - replace 'FLAGVAR' with 'FLAG', same for the plural versions
 - 
 
 [Item]:
@@ -41,7 +43,12 @@ all feature branches can be found at: https://github.com/pret/pokeemerald/wiki/F
 
 Stair Warps: https://github.com/pret/pokeemerald/wiki/Stair-Warps
 
+
+
 ALREADY IMPLEMENTED:
-- [Battling] Obtain exp. points per catch: https://www.pokecommunity.com/showpost.php?p=10209772
+- [UI] Add Physical Special Split: https://github.com/pret/pokeemerald/wiki/add-physical-special-split
 - [Bugs] Seeding the RNG properly on startup: https://www.pokecommunity.com/showpost.php?p=10211666&postcount=155
+- [UI] Fully functional debug menu with Flags, Vars, Items, custom scripts, Pokemon and more!: https://www.pokecommunity.com/showpost.php?p=10220970&postcount=175
+- [UI] Adding the Fairy Type: https://www.pokecommunity.com/showpost.php?p=10325868
+- [Battling] Obtain exp. points per catch: https://www.pokecommunity.com/showpost.php?p=10209772
 - 
