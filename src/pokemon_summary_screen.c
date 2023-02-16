@@ -3752,6 +3752,15 @@ static void PrintMovePowerAndAccuracy(u16 moveIndex)
    	struct Pokemon *mon = &sMonSummaryScreen->currentMon;
     	u16 species = GetMonData(mon, MON_DATA_SPECIES);
      	const u8 *text;
+        u8 monFriendship = GetMonData(&gPlayerParty[sMonSummaryScreen->curMonIndex], MON_DATA_FRIENDSHIP);
+        u8 returnCalc = (10 * monFriendship / 25);
+        u8 frustrationCalc = (10 * (MAX_FRIENDSHIP - monFriendship));
+
+        if (returnCalc == 0)
+            returnCalc = 1;
+        else if (frustrationCalc == 0)
+            frustrationCalc = 1;
+
      	if (moveIndex != 0)
      	{
          	FillWindowPixelRect(PSS_LABEL_WINDOW_MOVES_POWER_ACC, PIXEL_FILL(0), 53, 0, 19, 32);
@@ -3772,7 +3781,17 @@ static void PrintMovePowerAndAccuracy(u16 moveIndex)
 		}
 		else
 		{
-			if (gBattleMoves[moveIndex].power < 2)
+			if (moveIndex == MOVE_RETURN)
+            {
+                ConvertIntToDecimalStringN(gStringVar1, (10 * monFriendship / 25), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                text = gStringVar1;
+            }
+            else if (moveIndex == MOVE_FRUSTRATION)
+            {
+                ConvertIntToDecimalStringN(gStringVar1, (10 * (MAX_FRIENDSHIP - monFriendship) / 25), STR_CONV_MODE_RIGHT_ALIGN, 3);
+                text = gStringVar1;
+            }
+            else if (gBattleMoves[moveIndex].power < 2)
 			{
 				text = gText_ThreeDashes;
 			}

@@ -5224,10 +5224,6 @@ static void AI_Watch(void)
 // Roaming pokemon logic
 static s16 AI_Roaming(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
 {
-    if (IsBattlerTrapped(battlerAtk, FALSE))
-        return score;
-
-    AI_Flee();
     return score;
 }
 

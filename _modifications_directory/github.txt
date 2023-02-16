@@ -4,6 +4,7 @@ modifications added:
 [Bugs]
 - Fix Snow Weather: https://github.com/pret/pokeemerald/wiki/Fix-Snow-Weather
 - Surfing Dismount Ground Effects: https://github.com/pret/pokeemerald/wiki/Surfing-Dismount-Ground-Effects
+- Better Reflection System: https://github.com/pret/pokeemerald/wiki/Reflections
 - 
 
 [UI]:

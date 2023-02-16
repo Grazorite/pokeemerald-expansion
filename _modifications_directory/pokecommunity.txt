@@ -37,6 +37,13 @@ modifications added:
 - Increase Text Speed Beyond Fast: https://www.pokecommunity.com/showpost.php?p=10400198
 - Swap party screen slots using Select: https://www.pokecommunity.com/showpost.php?p=10420662
 - Remove Map Popups On Maps With The Same Map Section: https://www.pokecommunity.com/showpost.php?p=10449889
+- Shortcut to run quickly from wild battles: https://www.pokecommunity.com/showpost.php?p=10460247
+    - append #define 'STRINGID_RUNPROMPT' & increment 'BATTLESTRINGS_COUNT' by 1
+    - replace '[STRINGID_RUNPROMPT - 12]' with '[STRINGID_RUNPROMPT - BATTLESTRINGS_TABLE_START]'
+- Make Poké Balls usable outside of battles: https://www.pokecommunity.com/showthread.php?p=10539730#post10539730
+- Recover the R-button's Letter changing function of the naming screen.: https://www.pokecommunity.com/showthread.php?p=10541258#post10541258
+- Displaying the power of Frustration/Return in the Summary Screen: https://www.pokecommunity.com/showpost.php?p=10575976&postcount=420
+    - https://www.pokecommunity.com/showpost.php?p=10576661#post10576661
 - 
 
 [Item]:
@@ -48,6 +55,10 @@ modifications added:
 - Remove the need to water berries on rainy Routes: https://www.pokecommunity.com/showpost.php?p=10349397&postcount=258
     - https://www.pokecommunity.com/showthread.php?p=10431299#post10431299
 - Feed any number of pokéblocks: https://www.pokecommunity.com/showpost.php?p=10364627
+- Increase bag item capacity: https://www.pokecommunity.com/showpost.php?p=10523495
+    - 'maxquantity' located in src\shop.c
+- DPPt Bike (a 2-in-1 Bike) (Alterntive Take): https://www.pokecommunity.com/showpost.php?p=10217718#post10217718
+- Let the Player only buy TMs and HMs once: https://www.pokecommunity.com/showpost.php?p=10182590&postcount=117
 - 
 
 [Scripting]:
@@ -58,14 +69,20 @@ modifications added:
 [Overworld]:
 - Let a Pokémon forget any move they know: https://www.pokecommunity.com/showpost.php?p=10182839&postcount=119
     - https://www.pokecommunity.com/showpost.php?p=10232764&postcount=185
+- Overworld 1HP Poison Survival: https://www.pokecommunity.com/showpost.php?p=10068565&postcount=32
+    - 'gText_PkmnFainted3' replaced by 'gText_PkmnFainted_FldPsn'
 - Making Pokémon with Poison Heal be unaffected by poison in the overworld: https://www.pokecommunity.com/showpost.php?p=10349195&postcount=256
 - Allow player to change direction while moving: https://www.pokecommunity.com/showpost.php?p=10402610
 - Fast Surfing: https://www.pokecommunity.com/showpost.php?p=10137446&postcount=59
     - https://www.pokecommunity.com/showpost.php?p=10457096#post10457096
+- Running speed by default: https://www.pokecommunity.com/showpost.php?p=10541790&postcount=409
 - 
 
 [Graphics]:
 - Changing Birch's Intro Pokémon: https://www.pokecommunity.com/showpost.php?p=9967857&postcount=6
+- Enable the Opponent Trainers to throw Pokeball instead of dropping it directly to the battlefield.: https://www.pokecommunity.com/showpost.php?p=10546712&postcount=410
+- Print the Icons of the Player's Party Pokemon on the Back Side of the Trainer Card.: https://www.pokecommunity.com/showpost.php?p=10566704&postcount=416
+    - in the arguments of 'CreateMonIcon()', take out 'TRUE'
 - 
 
 [Battling]:
@@ -73,6 +90,8 @@ modifications added:
 - Set Wild Pokémon's Levels Dynamically: https://www.pokecommunity.com/showpost.php?p=10100138
 - Always inherit nature when holding an Everstone: https://www.pokecommunity.com/showpost.php?p=10160374#post10160374
 - Create Pokémon with Three Perfect IVs: https://www.pokecommunity.com/showpost.php?p=10410959
+- Prevent Roamers From Fleeing: https://www.pokecommunity.com/showpost.php?p=10533514#post10533514
+    - delete function logic from AI_Roaming() in src\battle_ai_main.c
 - 
 
 [Code]:
@@ -84,10 +103,6 @@ git remote + pull feature branches: (currently not implemented)
 
 1. Gen. 6 styled Exp. Share
     - https://www.pokecommunity.com/showthread.php?p=10060538#post10060538
-    - 
-
-2. Overworld 1HP Poison Survival
-    - https://www.pokecommunity.com/showthread.php?p=10068565#post10068565
 
 3. Item Descriptions On First Obtain
     - https://www.pokecommunity.com/showthread.php?p=10126502#post10126502
@@ -102,17 +117,11 @@ git remote + pull feature branches: (currently not implemented)
     - https://www.pokecommunity.com/showthread.php?p=10161076#post10161076
     - https://www.pokecommunity.com/showthread.php?p=10161111#post10161111
 
-7. DPPt Bike (a 2-in-1 Bike) (Alterntive Take)
-    - https://www.pokecommunity.com/showthread.php?p=10217718#post10217718
-
 8. Bag Sorting
     - https://www.pokecommunity.com/showthread.php?p=10167488#post10167488
 
 9. Plural giveitem
     - https://www.pokecommunity.com/showthread.php?p=10177314#post10177314
-
-10. Let the Player only buy TMs and HMs once
-    - https://www.pokecommunity.com/showthread.php?p=10182590#post10182590
 
 11. Rock Climb
     - https://www.pokecommunity.com/showthread.php?p=10202403#post10202403
@@ -141,3 +150,5 @@ git remote + pull feature branches: (currently not implemented)
 
 
 
+IMPLEMENTED BUT NOT WORKING:
+- Physical Special Split Icons In Battle: https://www.pokecommunity.com/showpost.php?p=10527471
