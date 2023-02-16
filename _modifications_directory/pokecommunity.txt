@@ -45,7 +45,7 @@ modifications added:
     - https://www.pokecommunity.com/showpost.php?p=10576661#post10576661
 - Physical Special Split Icons In Battle: https://www.pokecommunity.com/showpost.php?p=10527471
 - DS-Style party screen (2 versions): https://www.pokecommunity.com/showpost.php?p=10218092&postcount=173
-    - USE v1! v2 is broken
+    - USE v1!
     - the 'enum' to declare 'PARTY_BOX_EQUAL_COLUMN' is found in src\party_menu.c NOT src\data\party_menu.h
     - https://www.pokecommunity.com/showpost.php?p=10485268#post10485268
 - 
