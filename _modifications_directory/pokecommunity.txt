@@ -4,7 +4,6 @@ modifications added:
 [Bugs]
 - Wrong Save Type Error Screen: https://www.pokecommunity.com/showpost.php?p=10449518
 - Restoring the Shred Split Battle Transition: https://www.pokecommunity.com/showpost.php?p=10449556
-- 
 
 [UI]:
 - Modifying Starter Pokémon: https://www.pokecommunity.com/showpost.php?p=9962255&postcount=3
@@ -44,6 +43,11 @@ modifications added:
 - Recover the R-button's Letter changing function of the naming screen.: https://www.pokecommunity.com/showthread.php?p=10541258#post10541258
 - Displaying the power of Frustration/Return in the Summary Screen: https://www.pokecommunity.com/showpost.php?p=10575976&postcount=420
     - https://www.pokecommunity.com/showpost.php?p=10576661#post10576661
+- Physical Special Split Icons In Battle: https://www.pokecommunity.com/showpost.php?p=10527471
+- DS-Style party screen (2 versions): https://www.pokecommunity.com/showpost.php?p=10218092&postcount=173
+    - USE v1! v2 is broken
+    - the 'enum' to declare 'PARTY_BOX_EQUAL_COLUMN' is found in src\party_menu.c NOT src\data\party_menu.h
+    - https://www.pokecommunity.com/showpost.php?p=10485268#post10485268
 - 
 
 [Item]:
@@ -132,9 +136,6 @@ git remote + pull feature branches: (currently not implemented)
 13. Omnidirectional Jumping
     - https://www.pokecommunity.com/showthread.php?p=10212519#post10212519
 
-14. DS-Style party screen (2 versions)
-    - https://www.pokecommunity.com/showthread.php?p=10218092#post10218092
-
 15. Improved scrolling options menu with faster text, HP and EXP bar speeds and a metric unit option!
     - https://www.pokecommunity.com/showthread.php?p=10275248#post10275248
 
@@ -151,4 +152,3 @@ git remote + pull feature branches: (currently not implemented)
 
 
 IMPLEMENTED BUT NOT WORKING:
-- Physical Special Split Icons In Battle: https://www.pokecommunity.com/showpost.php?p=10527471
