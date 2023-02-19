@@ -37,7 +37,7 @@ modifications added:
 - Swap party screen slots using Select: https://www.pokecommunity.com/showpost.php?p=10420662
 - Remove Map Popups On Maps With The Same Map Section: https://www.pokecommunity.com/showpost.php?p=10449889
 - Shortcut to run quickly from wild battles: https://www.pokecommunity.com/showpost.php?p=10460247
-    - append #define 'STRINGID_RUNPROMPT' & increment 'BATTLESTRINGS_COUNT' by 1
+    - append '#define STRINGID_RUNPROMPT' & increment 'BATTLESTRINGS_COUNT' by 1
     - replace '[STRINGID_RUNPROMPT - 12]' with '[STRINGID_RUNPROMPT - BATTLESTRINGS_TABLE_START]'
 - Make Poké Balls usable outside of battles: https://www.pokecommunity.com/showthread.php?p=10539730#post10539730
 - Recover the R-button's Letter changing function of the naming screen.: https://www.pokecommunity.com/showthread.php?p=10541258#post10541258
@@ -48,6 +48,10 @@ modifications added:
     - USE v1!
     - the 'enum' to declare 'PARTY_BOX_EQUAL_COLUMN' is found in src\party_menu.c NOT src\data\party_menu.h
     - https://www.pokecommunity.com/showpost.php?p=10485268#post10485268
+- Mid-battle Evolutions: https://www.pokecommunity.com/showpost.php?p=10464666
+    - in function CB2_SetUpReshowBattleScreenAfterEvolution, replace 'ReshowBattleScreenAfterMenu' with 'CB2_SetUpReshowBattleScreenAfterMenu'
+    - in function CopyPlayerPartyMonToBattleData, exclude the 'resetStats' condition
+    - in function PlayerTryEvolution, append additional argument 'NULL' to 'GetEvolutionTargetSpecies'
 - 
 
 [Item]:
@@ -121,9 +125,6 @@ git remote + pull feature branches: (currently not implemented)
     - https://www.pokecommunity.com/showthread.php?p=10161076#post10161076
     - https://www.pokecommunity.com/showthread.php?p=10161111#post10161111
 
-8. Bag Sorting
-    - https://www.pokecommunity.com/showthread.php?p=10167488#post10167488
-
 9. Plural giveitem
     - https://www.pokecommunity.com/showthread.php?p=10177314#post10177314
 
@@ -149,6 +150,10 @@ git remote + pull feature branches: (currently not implemented)
     - https://www.pokecommunity.com/showthread.php?p=10380770#post10380770
 
 
+Bag Sorting: https://www.pokecommunity.com/showthread.php?p=10167488#post10167488
 
 
-IMPLEMENTED BUT NOT WORKING:
+NOT WORKING:
+- [UI] TM Case ported from FR and custom one!: https://www.pokecommunity.com/showpost.php?p=10378278
+    - maybe can try fr_tm_case_port branch: https://github.com/pret/pokeemerald/compare/master...TheXaman:pokeemerald:fr_tm_case_port
+- [UI] Nature Mints: https://www.pokecommunity.com/showpost.php?p=10245635&postcount=191

@@ -5670,7 +5670,7 @@ void PokemonToBattleMon(struct Pokemon *src, struct BattlePokemon *dst)
     dst->status2 = 0;
 }
 
-void CopyPlayerPartyMonToBattleData(u8 battlerId, u8 partyIndex)
+void CopyPlayerPartyMonToBattleData(u8 battlerId, u8 partyIndex, bool8 resetStats)
 {
     PokemonToBattleMon(&gPlayerParty[partyIndex], &gBattleMons[battlerId]);
     gBattleStruct->hpOnSwitchout[GetBattlerSide(battlerId)] = gBattleMons[battlerId].hp;
@@ -6048,7 +6048,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                                 if (battlerId != MAX_BATTLERS_COUNT)
                                 {
                                     gAbsentBattlerFlags &= ~gBitTable[battlerId];
-                                    CopyPlayerPartyMonToBattleData(battlerId, GetPartyIdFromBattlePartyId(gBattlerPartyIndexes[battlerId]));
+                                    CopyPlayerPartyMonToBattleData(battlerId, GetPartyIdFromBattlePartyId(gBattlerPartyIndexes[battlerId]), TRUE);
                                     if (GetBattlerSide(gActiveBattler) == B_SIDE_PLAYER && gBattleResults.numRevivesUsed < 255)
                                         gBattleResults.numRevivesUsed++;
                                 }
