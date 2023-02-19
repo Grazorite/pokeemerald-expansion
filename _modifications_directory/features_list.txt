@@ -1,0 +1,200 @@
+all tutorials/modifications can be found at: https://github.com/pret/pokeemerald/wiki/Tutorials
+all simple modifications (overlaps) can be found at: https://www.pokecommunity.com/showthread.php?t=416647
+
+
+already implemented in pokeemerald-expansion:
+- [Bugs] Fix critical bug with wild land Pokemon encounter ratio: https://www.pokecommunity.com/showpost.php?p=10376011
+- [Bugs] Fixing Battle Factory opponent IV Glitch: https://www.pokecommunity.com/showpost.php?p=10188758
+- [Bugs] Seeding the RNG properly on startup: https://www.pokecommunity.com/showpost.php?p=10211666&postcount=155
+- [UI] Fully functional debug menu with Flags, Vars, Items, custom scripts, Pokemon and more!: https://www.pokecommunity.com/showpost.php?p=10220970&postcount=175
+- [UI] Prompt for reusing Repels: https://github.com/pret/pokeemerald/wiki/Prompt-for-reusing-Repels
+- [UI] Add Physical Special Split: https://github.com/pret/pokeemerald/wiki/add-physical-special-split
+- [UI] Adding the Fairy Type: https://www.pokecommunity.com/showpost.php?p=10325868
+- [Overworld] Allow running indoors: https://github.com/pret/pokeemerald/wiki/Allow-running-indoors
+- [Graphics] Trainer Class Based Poké Balls: https://github.com/pret/pokeemerald/wiki/Trainer-Class-Based-Pok%C3%A9-Balls
+- [Battling] Obtain exp. points per catch: https://www.pokecommunity.com/showpost.php?p=10209772
+
+
+working modifications (added):
+[Bugs]
+- Faster HP Drain: https://github.com/pret/pokeemerald/wiki/Faster-HP-Drain
+- Not showing dex entries until getting the Pokédex: https://github.com/pret/pokeemerald/wiki/Not-showing-dex-entries-until-getting-the-Pok%C3%A9dex
+- Wrong Save Type Error Screen: https://www.pokecommunity.com/showpost.php?p=10449518
+- Surfing Dismount Ground Effects: https://github.com/pret/pokeemerald/wiki/Surfing-Dismount-Ground-Effects
+- Fix Snow Weather: https://github.com/pret/pokeemerald/wiki/Fix-Snow-Weather
+- Keep the Camera from Making Waves: https://github.com/pret/pokeemerald/wiki/Keep-the-Camera-from-Making-Waves
+- Better Reflection System: https://github.com/pret/pokeemerald/wiki/Reflections
+- Restoring the Shred Split Battle Transition: https://www.pokecommunity.com/showpost.php?p=10449556
+
+[UI]:
+- Add Ability to Avoid Battle Damage in Debug Menu: https://github.com/pret/pokeemerald/wiki/Add-Ability-to-Avoid-Battle-Damage-in-Debug-Menu
+    - replace 'FLAGVAR' with 'FLAG', same for the plural versions
+- Make Poké Balls usable outside of battles: https://www.pokecommunity.com/showpost.php?p=10539730#post10539730
+- Change bag sound with the ones from FR: https://www.pokecommunity.com/showpost.php?p=10205757
+- Reusable TMs: https://www.pokecommunity.com/showpost.php?p=10209376
+    - https://www.pokecommunity.com/showpost.php?p=10209376
+    - function sub_81B6EB4 is now Task_LearnedMove
+    - replace 'gBagPositionStruct' with 'gBagPosition'
+- Repeated Field Medicine Use: https://github.com/pret/pokeemerald/wiki/Repeated-Field-Medicine-Use
+- Removing the extra save confirmation: https://github.com/pret/pokeemerald/wiki/Remove-the-extra-save-confirmation
+- Move Item: https://www.pokecommunity.com/showpost.php?p=10120157
+    - many renamed methods, follow the below links to update
+    - https://www.pokecommunity.com/showpost.php?p=10370249#post10370249
+    - https://www.pokecommunity.com/showpost.php?p=10517557#post10517557
+    - https://www.pokecommunity.com/showpost.php?p=10587921#post10587921
+    - https://www.pokecommunity.com/showpost.php?p=10588071#post10588071
+- Increase Text Speed Beyond Fast: https://www.pokecommunity.com/showpost.php?p=10400198
+- Remove Map Popups On Maps With The Same Map Section: https://www.pokecommunity.com/showpost.php?p=10449889
+- Editing Default Options Settings: https://www.pokecommunity.com/showpost.php?p=9967853&postcount=5
+- Improving the Pace of Battles: https://www.pokecommunity.com/showpost.php?p=10266925
+    - replace 'pause 0x20' with 'pause B_WAIT_TIME_SHORT'
+    - did not modify mega evolutions
+- Hidden Power type in summary screen: https://www.pokecommunity.com/showpost.php?p=10269132
+- Make the game read the dynamic type of Hidden Power in battles: https://www.pokecommunity.com/showpost.php?p=10269149
+- Have the game display Hidden Power's true base power (for pre - Gen VI power calculations): https://www.pokecommunity.com/showpost.php?p=10269828
+- Colored stats by nature in summary screen: https://github.com/pret/pokeemerald/wiki/Colored-stats-by-nature-in-summary-screen
+- DS-Style party screen: https://www.pokecommunity.com/showpost.php?p=10218092&postcount=173
+    - 2 versions, but use v1!
+    - the 'enum' to declare 'PARTY_BOX_EQUAL_COLUMN' is found in src\party_menu.c NOT src\data\party_menu.h
+    - https://www.pokecommunity.com/showpost.php?p=10485268#post10485268
+- Make text speed-up like holding the A/B buttons automatically: https://www.pokecommunity.com/showpost.php?p=10266385
+- Physical Special Split Icons In Battle: https://www.pokecommunity.com/showpost.php?p=10527471
+- Instead of Asking to Stop learning a New Move, You'll be Asked to Continue Learning: https://github.com/pret/pokeemerald/wiki/Instead-of-Asking-to-Stop-learning-a-New-Move,-You'll-be-Asked-to-Continue-Learning
+    - replace '(var == MENU_B_PRESSED || var == 1)' with '(selection == MENU_B_PRESSED || selection == 1)'
+- Remove the Low Health Beep: https://www.pokecommunity.com/showpost.php?p=10246778&postcount=194
+- Showing IVs/EVs in Summary Screen: https://www.pokecommunity.com/showpost.php?p=10161688#post10161688
+    - https://www.pokecommunity.com/showpost.php?p=10410302#post10410302
+- Modifying Starter Pokémon: https://www.pokecommunity.com/showpost.php?p=9962255&postcount=3
+- Nicknaming as an option in the Pokémon Party Screen + Bugfix + Improvements: https://www.pokecommunity.com/showpost.php?p=10120389#post10120389
+- Shortcut to run quickly from wild battles: https://www.pokecommunity.com/showpost.php?p=10460247
+    - append '#define STRINGID_RUNPROMPT' & increment 'BATTLESTRINGS_COUNT' by 1
+    - replace '[STRINGID_RUNPROMPT - 12]' with '[STRINGID_RUNPROMPT - BATTLESTRINGS_TABLE_START]'
+- Mid-battle Evolutions: https://www.pokecommunity.com/showpost.php?p=10464666
+    - in function CB2_SetUpReshowBattleScreenAfterEvolution, replace 'ReshowBattleScreenAfterMenu' with 'CB2_SetUpReshowBattleScreenAfterMenu'
+    - in function CopyPlayerPartyMonToBattleData, exclude the 'resetStats' condition
+    - in function PlayerTryEvolution, append additional argument 'NULL' to 'GetEvolutionTargetSpecies'
+- Show Type Effectiveness In-Battle: https://www.pokecommunity.com/showpost.php?p=10167016#post10167016
+    - https://www.pokecommunity.com/showpost.php?p=10582554#post10582554
+    - the dictionaries pasted in src\battle_messages.c & src\battle_bg.c should be assigned to keys, i.e. [24], [25], [26]
+    - 'gStandardBattleWindowTemplates' is now 'sStandardBattleWindowTemplates'
+    - MoveSelectionDisplayMoveType(void) found in src\battle_controller_player.c
+    - 'sTypeEffectivenessTable' replaces existing one in src\battle_util.c
+- Change the Clock Time: https://www.pokecommunity.com/showpost.php?p=10481737
+- Recover the R-button's Letter changing function of the naming screen.: https://www.pokecommunity.com/showpost.php?p=10541258#post10541258
+- Lower case after first input in the naming screen: https://www.pokecommunity.com/showpost.php?p=10199896&postcount=139
+- "Move Pokémon" as first PSS option: https://www.pokecommunity.com/showpost.php?p=10065761
+- Swap party screen slots using Select: https://www.pokecommunity.com/showpost.php?p=10420662
+- Wrapping Summary Screen: https://www.pokecommunity.com/showpost.php?p=10060875&postcount=27
+- Change order of genders in New Game: https://www.pokecommunity.com/showpost.php?p=10217558&postcount=171
+- Displaying the power of Frustration/Return in the Summary Screen: https://www.pokecommunity.com/showpost.php?p=10575976&postcount=420
+    - https://www.pokecommunity.com/showpost.php?p=10576661#post10576661
+- Allow All Pokemon to Evolve Without Trading: https://github.com/pret/pokeemerald/wiki/Allow-All-Pokemon-to-Evolve-Without-Trading
+    - in include/constants/items.h, enclose '(item) >= ITEM_POTION && (item) <= LAST_BERRY_INDEX' in bracket, keep everything on one line
+    - only need to modify 'gItemEffectTable[]' in src/data/pokemon/item_effects.h
+    - evolutions to change: trade, items, location-based
+    - list of trade items: ITEM_KINGS_ROCK, ITEM_METAL_COAT, ITEM_DEEP_SEA_TOOTH, ITEM_DEEP_SEA_SCALE, ITEM_DRAGON_SCALE, ITEM_UPGRADE, ITEM_PROTECTOR, ITEM_ELECTIRIZER, ITEM_MAGMARIZER, ITEM_DUBIOUS_DISC, ITEM_REAPER_CLOTH, ITEM_PRISM_SCALE, ITEM_WHIPPED_DREAM, ITEM_SACHET, ITEM_OVAL_STONE
+- Show Species That You're Switching For in the Party Menu: https://github.com/pret/pokeemerald/wiki/Show-Species-That-You're-Switching-For-in-the-Party-Menu
+
+[Item]:
+- Increase money limit: https://github.com/pret/pokeemerald/wiki/Increase-money-limit
+- LGPE Style Bonus Premier Balls: https://github.com/pret/pokeemerald/wiki/LGPE-Style-Bonus-Premier-Balls
+- Plural Giveitem: https://github.com/pret/pokeemerald/wiki/Plural-Giveitem
+- Editing Player PC Items: https://www.pokecommunity.com/showpost.php?p=9962254&postcount=2
+- Changing the Beginning Amount of Money: https://www.pokecommunity.com/showpost.php?p=9967852#post9967852
+- Modifying the move of a TM/HM: https://www.pokecommunity.com/showpost.php?p=10140674#post10140674
+- Faster berry interactions: https://www.pokecommunity.com/showpost.php?p=10164065#post10164065
+    - https://www.pokecommunity.com/showpost.php?p=10261366#post10261366
+- Remove the need to water berries on rainy Routes: https://www.pokecommunity.com/showpost.php?p=10349397&postcount=258
+    - https://www.pokecommunity.com/showpost.php?p=10431299#post10431299
+- Feed any number of pokéblocks: https://www.pokecommunity.com/showpost.php?p=10364627
+- Increase bag item capacity: https://www.pokecommunity.com/showpost.php?p=10523495
+    - 'maxquantity' located in src\shop.c
+- DPPt Bike (a 2-in-1 Bike) (Alterntive Take): https://www.pokecommunity.com/showpost.php?p=10217718#post10217718
+- Let the Player only buy TMs and HMs once: https://www.pokecommunity.com/showpost.php?p=10182590&postcount=117
+- 
+
+[Scripting]:
+- Berry Trees No Longer Disappear: https://www.pokecommunity.com/showpost.php?p=10142996#post10142996
+    - change 'growthSparkle' to 'stopGrowth'
+- 
+
+[Overworld]:
+- Pokecenters Disregard Eggs: https://github.com/pret/pokeemerald/wiki/Pokecenters-Disregard-Eggs
+- Speedy Nurse Joy: https://github.com/pret/pokeemerald/wiki/Speedy-Nurse-Joy
+- Let a Pokémon forget any move they know: https://www.pokecommunity.com/showpost.php?p=10182839&postcount=119
+    - https://www.pokecommunity.com/showpost.php?p=10232764&postcount=185
+- Overworld 1HP Poison Survival: https://www.pokecommunity.com/showpost.php?p=10068565&postcount=32
+    - 'gText_PkmnFainted3' replaced by 'gText_PkmnFainted_FldPsn'
+- Making Pokémon with Poison Heal be unaffected by poison in the overworld: https://www.pokecommunity.com/showpost.php?p=10349195&postcount=256
+- Allow player to change direction while moving: https://www.pokecommunity.com/showpost.php?p=10402610
+- Fast Surfing: https://www.pokecommunity.com/showpost.php?p=10137446&postcount=59
+    - https://www.pokecommunity.com/showpost.php?p=10457096#post10457096
+- Running speed by default: https://www.pokecommunity.com/showpost.php?p=10541790&postcount=409
+- 
+
+[Graphics]:
+- Changing Birch's Intro Pokémon: https://www.pokecommunity.com/showpost.php?p=9967857&postcount=6
+- Enable the Opponent Trainers to throw Pokeball instead of dropping it directly to the battlefield.: https://www.pokecommunity.com/showpost.php?p=10546712&postcount=410
+- Print the Icons of the Player's Party Pokemon on the Back Side of the Trainer Card.: https://www.pokecommunity.com/showpost.php?p=10566704&postcount=416
+    - in the arguments of 'CreateMonIcon()', take out 'TRUE'
+- 
+
+[Battling]:
+- Set Trainer's Levels Dynamically: https://www.pokecommunity.com/showpost.php?p=10099773
+- Set Wild Pokémon's Levels Dynamically: https://www.pokecommunity.com/showpost.php?p=10100138
+- Always inherit nature when holding an Everstone: https://www.pokecommunity.com/showpost.php?p=10160374#post10160374
+- Create Pokémon with Three Perfect IVs: https://www.pokecommunity.com/showpost.php?p=10410959
+- Prevent Roamers From Fleeing: https://www.pokecommunity.com/showpost.php?p=10533514#post10533514
+    - delete function logic from AI_Roaming() in src\battle_ai_main.c
+
+
+
+
+
+all feature branches can be found at: https://github.com/pret/pokeemerald/wiki/Feature-Branches
+
+Stair Warps: https://github.com/pret/pokeemerald/wiki/Stair-Warps
+
+Gen. 6 styled Exp. Share: https://www.pokecommunity.com/showthread.php?p=10060538#post10060538
+
+FRLG / Gen IV and Onwards White Out Money Calculation (with messages): https://www.pokecommunity.com/showthread.php?p=10137272#post10137272
+
+Auto-Run: https://www.pokecommunity.com/showthread.php?p=10161076#post10161076
+    - https://www.pokecommunity.com/showthread.php?p=10161111#post10161111
+
+Rock Climb: https://www.pokecommunity.com/showthread.php?p=10202403#post10202403
+
+Grindrunning For Easier Diagonal Movement: https://www.pokecommunity.com/showthread.php?p=10202986#post10202986
+
+Omnidirectional Jumping: https://www.pokecommunity.com/showthread.php?p=10212519#post10212519
+
+Improved scrolling options menu with faster text, HP and EXP bar speeds and a metric unit option!: https://www.pokecommunity.com/showthread.php?p=10275248#post10275248
+
+Wonder Trade: https://www.pokecommunity.com/showthread.php?p=10357573#post10357573
+
+Register items in a list menu!: https://www.pokecommunity.com/showthread.php?p=10380770#post10380770
+
+Bag Sorting: https://www.pokecommunity.com/showthread.php?p=10167488#post10167488
+
+
+
+MAYBE BROKEN:
+- [UI] Remove the functionally redundant move grammar tables: https://github.com/pret/pokeemerald/wiki/Remove-the-functionally-redundant-move-grammar-tables
+- [UI] Make L Button Be Turbo A When L=A Option Is Set: https://github.com/pret/pokeemerald/wiki/Make-L-Button-Be-Turbo-A-When-L=A-Option-Is-Set
+
+
+
+NOT WORKING:
+- [UI] TM Case ported from FR and custom one!: https://www.pokecommunity.com/showpost.php?p=10378278
+    - maybe can try fr_tm_case_port branch: https://github.com/pret/pokeemerald/compare/master...TheXaman:pokeemerald:fr_tm_case_port
+- [UI] Nature Mints: https://www.pokecommunity.com/showpost.php?p=10245635&postcount=191
+- [Item] Item Descriptions On First Obtain: https://www.pokecommunity.com/showthread.php?p=10126502#post10126502
+    - size of array `SaveBlock2FreeSpace' is negative
+- [Item] Register Items with LR: https://www.pokecommunity.com/showthread.php?p=10134388#post10134388
+    - need to find renamed sub methods
+- [UI] Use Fly/Flash from party menu if Pokémon is compatible: https://www.pokecommunity.com/showpost.php?p=10420068
+    - replace 'CanMonLearnTMHM(&mons[slotId], ITEM_HM02 - ITEM_TM01)' with 'CanLearnTeachableMove(GetMonData(&mons[slotId]), ItemIdToBattleMoveId(ITEM_HM02 - ITEM_TM01))'
+    - builds but doens't work
+- [UI] Chain Fishing: https://github.com/pret/pokeemerald/wiki/Chain-Fishing
+- [UI]  Make text autoscroll: https://www.pokecommunity.com/showpost.php?p=10266389
+- 
