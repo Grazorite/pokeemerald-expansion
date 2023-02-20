@@ -21,7 +21,7 @@ already implemented in pokeemerald-expansion:
 
 
 working modifications (added):
-[Bugs]
+[Bugs]:
 - Faster HP Drain: https://github.com/pret/pokeemerald/wiki/Faster-HP-Drain
 - Not showing dex entries until getting the Pokédex: https://github.com/pret/pokeemerald/wiki/Not-showing-dex-entries-until-getting-the-Pok%C3%A9dex
 - Wrong Save Type Error Screen: https://www.pokecommunity.com/showpost.php?p=10449518
@@ -137,11 +137,16 @@ working modifications (added):
 - 
 
 [Graphics]:
-- Changing Birch's Intro Pokémon: https://www.pokecommunity.com/showpost.php?p=9967857&postcount=6
 - Enable the Opponent Trainers to throw Pokeball instead of dropping it directly to the battlefield.: https://www.pokecommunity.com/showpost.php?p=10546712&postcount=410
+- Changing Birch's Intro Pokémon: https://www.pokecommunity.com/showpost.php?p=9967857&postcount=6
+- Remove the "Green Flash" screen of the opening's background when the pokemon logo appears: https://www.pokecommunity.com/showpost.php?p=10529424
+- Button Press to Skip Copyright Screen: https://github.com/pret/pokeemerald/wiki/Button-Press-to-Skip-Copyright-Screen
 - Print the Icons of the Player's Party Pokemon on the Back Side of the Trainer Card.: https://www.pokecommunity.com/showpost.php?p=10566704&postcount=416
     - in the arguments of 'CreateMonIcon()', take out 'TRUE'
-- 
+- Change Someone's PC to Lanette's PC from the Start of the Game: https://github.com/pret/pokeemerald/wiki/Change-Someone's-PC-to-Lanette's-PC-from-the-Start-of-the-Game
+- Make the Person in the Intro Match the the Save File: https://github.com/pret/pokeemerald/wiki/Make-the-Person-in-the-Intro-Match-the-the-Save-File
+- Get Rid of Battery Run Dry Error Message: https://github.com/pret/pokeemerald/wiki/Get-Rid-of-Battery-Run-Dry-Error-Message
+- Fixing the aspect ratio of the Pokémon logo on the title screen: https://github.com/pret/pokeemerald/wiki/Fixing-the-aspect-ratio-of-the-Pok%C3%A9mon-logo-on-the-title-screen
 
 [Battling]:
 - Change Time Based Evolution Times: https://github.com/pret/pokeemerald/wiki/Change-Time-Based-Evolution-Times
@@ -153,11 +158,12 @@ working modifications (added):
 - Inherit moves from both parents: https://www.pokecommunity.com/showpost.php?p=10416415
     - replace 'CanMonLearnTMHM(egg, j)' with 'CanLearnTeachableMove(GetMonData(egg), ItemIdToBattleMoveId(j))'
 - Change Starter Pokémon: https://github.com/pret/pokeemerald/wiki/Change-Starter-Pok%C3%A9mon
-- 
+- Raise Odds of Catching a Pokemon by Pressing B When the Ball Shakes: https://github.com/pret/pokeemerald/wiki/Raise-Odds-of-Catching-a-Pokemon-by-Pressing-B-When-the-Ball-Shakes
+    - implemented compounded odds (skip last section)
 - Shifting to Pokémon Already in Battle Exits the Shift Menu: https://github.com/pret/pokeemerald/wiki/Shifting-to-Pok%C3%A9mon-Already-in-Battle-Exits-the-Shift-Menu
 - Get Rid of Pokemon Disobeying You: https://github.com/pret/pokeemerald/wiki/Get-Rid-of-Pokemon-Disobeying-You
 - Make Pokemon that Require a Fateful Encounter to be Legal to Always Be Set to Legal: https://github.com/pret/pokeemerald/wiki/Make-Pokemon-that-Require-a-Fateful-Encounter-to-be-Legal-to-Always-Be-Set-to-Legal
-- 
+
 
 
 added feature branches:
