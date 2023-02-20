@@ -10,6 +10,7 @@ already implemented in pokeemerald-expansion:
 - [UI] Prompt for reusing Repels: https://github.com/pret/pokeemerald/wiki/Prompt-for-reusing-Repels
 - [UI] Add Physical Special Split: https://github.com/pret/pokeemerald/wiki/add-physical-special-split
 - [UI] Adding the Fairy Type: https://www.pokecommunity.com/showpost.php?p=10325868
+- [Iteem] Update Sitrus Berry's effect to Gen 4 standard: https://github.com/pret/pokeemerald/wiki/Update-Sitrus-Berry's-effect-to-Gen-4-standard
 - [Overworld] Allow running indoors: https://github.com/pret/pokeemerald/wiki/Allow-running-indoors
 - [Graphics] Trainer Class Based Poké Balls: https://github.com/pret/pokeemerald/wiki/Trainer-Class-Based-Pok%C3%A9-Balls
 - [Battling] Obtain exp. points per catch: https://www.pokecommunity.com/showpost.php?p=10209772
@@ -96,20 +97,27 @@ working modifications (added):
 - Show Species That You're Switching For in the Party Menu: https://github.com/pret/pokeemerald/wiki/Show-Species-That-You're-Switching-For-in-the-Party-Menu
 
 [Item]:
-- Increase money limit: https://github.com/pret/pokeemerald/wiki/Increase-money-limit
-- LGPE Style Bonus Premier Balls: https://github.com/pret/pokeemerald/wiki/LGPE-Style-Bonus-Premier-Balls
 - Plural Giveitem: https://github.com/pret/pokeemerald/wiki/Plural-Giveitem
-- Editing Player PC Items: https://www.pokecommunity.com/showpost.php?p=9962254&postcount=2
-- Changing the Beginning Amount of Money: https://www.pokecommunity.com/showpost.php?p=9967852#post9967852
-- Modifying the move of a TM/HM: https://www.pokecommunity.com/showpost.php?p=10140674#post10140674
+- DPPt Bike (a 2-in-1 Bike) (Alterntive Take): https://www.pokecommunity.com/showpost.php?p=10217718#post10217718
 - Faster berry interactions: https://www.pokecommunity.com/showpost.php?p=10164065#post10164065
     - https://www.pokecommunity.com/showpost.php?p=10261366#post10261366
 - Remove the need to water berries on rainy Routes: https://www.pokecommunity.com/showpost.php?p=10349397&postcount=258
     - https://www.pokecommunity.com/showpost.php?p=10431299#post10431299
+
+
+
+
+- Increase money limit: https://github.com/pret/pokeemerald/wiki/Increase-money-limit
+- LGPE Style Bonus Premier Balls: https://github.com/pret/pokeemerald/wiki/LGPE-Style-Bonus-Premier-Balls
+
+- Editing Player PC Items: https://www.pokecommunity.com/showpost.php?p=9962254&postcount=2
+- Changing the Beginning Amount of Money: https://www.pokecommunity.com/showpost.php?p=9967852#post9967852
+- Modifying the move of a TM/HM: https://www.pokecommunity.com/showpost.php?p=10140674#post10140674
+
+
 - Feed any number of pokéblocks: https://www.pokecommunity.com/showpost.php?p=10364627
 - Increase bag item capacity: https://www.pokecommunity.com/showpost.php?p=10523495
     - 'maxquantity' located in src\shop.c
-- DPPt Bike (a 2-in-1 Bike) (Alterntive Take): https://www.pokecommunity.com/showpost.php?p=10217718#post10217718
 - Let the Player only buy TMs and HMs once: https://www.pokecommunity.com/showpost.php?p=10182590&postcount=117
 - 
 
@@ -148,6 +156,9 @@ working modifications (added):
     - delete function logic from AI_Roaming() in src\battle_ai_main.c
 
 
+
+added feature branches:
+Samu/Xhyzi's DNS: https://github.com/Xhyzi/pokeemerald/tree/day-and-night
 
 
 
