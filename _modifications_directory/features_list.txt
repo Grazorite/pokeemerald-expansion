@@ -10,10 +10,14 @@ already implemented in pokeemerald-expansion:
 - [UI] Prompt for reusing Repels: https://github.com/pret/pokeemerald/wiki/Prompt-for-reusing-Repels
 - [UI] Add Physical Special Split: https://github.com/pret/pokeemerald/wiki/add-physical-special-split
 - [UI] Adding the Fairy Type: https://www.pokecommunity.com/showpost.php?p=10325868
-- [Iteem] Update Sitrus Berry's effect to Gen 4 standard: https://github.com/pret/pokeemerald/wiki/Update-Sitrus-Berry's-effect-to-Gen-4-standard
+- [Item] Update Sitrus Berry's effect to Gen 4 standard: https://github.com/pret/pokeemerald/wiki/Update-Sitrus-Berry's-effect-to-Gen-4-standard
+- [Item] FRLG / Gen IV and Onwards White Out Money Calculation (with messages): https://www.pokecommunity.com/showpost.php?p=10137272&postcount=58
 - [Overworld] Allow running indoors: https://github.com/pret/pokeemerald/wiki/Allow-running-indoors
 - [Graphics] Trainer Class Based Poké Balls: https://github.com/pret/pokeemerald/wiki/Trainer-Class-Based-Pok%C3%A9-Balls
+- [Battling] Make eggs hatch at level 1 instead of 5: https://www.pokecommunity.com/showpost.php?p=10154622
 - [Battling] Obtain exp. points per catch: https://www.pokecommunity.com/showpost.php?p=10209772
+- [Battling] Gen. 8 Synchronize: https://www.pokecommunity.com/showpost.php?p=10097171
+- 
 
 
 working modifications (added):
@@ -32,10 +36,6 @@ working modifications (added):
     - replace 'FLAGVAR' with 'FLAG', same for the plural versions
 - Make Poké Balls usable outside of battles: https://www.pokecommunity.com/showpost.php?p=10539730#post10539730
 - Change bag sound with the ones from FR: https://www.pokecommunity.com/showpost.php?p=10205757
-- Reusable TMs: https://www.pokecommunity.com/showpost.php?p=10209376
-    - https://www.pokecommunity.com/showpost.php?p=10209376
-    - function sub_81B6EB4 is now Task_LearnedMove
-    - replace 'gBagPositionStruct' with 'gBagPosition'
 - Repeated Field Medicine Use: https://github.com/pret/pokeemerald/wiki/Repeated-Field-Medicine-Use
 - Removing the extra save confirmation: https://github.com/pret/pokeemerald/wiki/Remove-the-extra-save-confirmation
 - Move Item: https://www.pokecommunity.com/showpost.php?p=10120157
@@ -65,7 +65,6 @@ working modifications (added):
 - Remove the Low Health Beep: https://www.pokecommunity.com/showpost.php?p=10246778&postcount=194
 - Showing IVs/EVs in Summary Screen: https://www.pokecommunity.com/showpost.php?p=10161688#post10161688
     - https://www.pokecommunity.com/showpost.php?p=10410302#post10410302
-- Modifying Starter Pokémon: https://www.pokecommunity.com/showpost.php?p=9962255&postcount=3
 - Nicknaming as an option in the Pokémon Party Screen + Bugfix + Improvements: https://www.pokecommunity.com/showpost.php?p=10120389#post10120389
 - Shortcut to run quickly from wild battles: https://www.pokecommunity.com/showpost.php?p=10460247
     - append '#define STRINGID_RUNPROMPT' & increment 'BATTLESTRINGS_COUNT' by 1
@@ -103,28 +102,25 @@ working modifications (added):
     - https://www.pokecommunity.com/showpost.php?p=10261366#post10261366
 - Remove the need to water berries on rainy Routes: https://www.pokecommunity.com/showpost.php?p=10349397&postcount=258
     - https://www.pokecommunity.com/showpost.php?p=10431299#post10431299
-
-
-
-
-- Increase money limit: https://github.com/pret/pokeemerald/wiki/Increase-money-limit
-- LGPE Style Bonus Premier Balls: https://github.com/pret/pokeemerald/wiki/LGPE-Style-Bonus-Premier-Balls
-
-- Editing Player PC Items: https://www.pokecommunity.com/showpost.php?p=9962254&postcount=2
-- Changing the Beginning Amount of Money: https://www.pokecommunity.com/showpost.php?p=9967852#post9967852
+- Reusable TMs: https://www.pokecommunity.com/showpost.php?p=10209376
+    - https://www.pokecommunity.com/showpost.php?p=10209376
+    - function sub_81B6EB4 is now Task_LearnedMove
+    - replace 'gBagPositionStruct' with 'gBagPosition'
+- Let the Player only buy TMs and HMs once: https://www.pokecommunity.com/showpost.php?p=10182590&postcount=117
 - Modifying the move of a TM/HM: https://www.pokecommunity.com/showpost.php?p=10140674#post10140674
-
-
-- Feed any number of pokéblocks: https://www.pokecommunity.com/showpost.php?p=10364627
+- Shuckle makes Berry Juice: https://github.com/pret/pokeemerald/wiki/Shuckle-makes-Berry-Juice
 - Increase bag item capacity: https://www.pokecommunity.com/showpost.php?p=10523495
     - 'maxquantity' located in src\shop.c
-- Let the Player only buy TMs and HMs once: https://www.pokecommunity.com/showpost.php?p=10182590&postcount=117
-- 
+- Increase money limit: https://github.com/pret/pokeemerald/wiki/Increase-money-limit
+- LGPE Style Bonus Premier Balls: https://github.com/pret/pokeemerald/wiki/LGPE-Style-Bonus-Premier-Balls
+- Editing Player PC Items: https://www.pokecommunity.com/showpost.php?p=9962254&postcount=2
+- Changing the Beginning Amount of Money: https://www.pokecommunity.com/showpost.php?p=9967852#post9967852
+- Feed any number of pokéblocks: https://www.pokecommunity.com/showpost.php?p=10364627
 
 [Scripting]:
 - Berry Trees No Longer Disappear: https://www.pokecommunity.com/showpost.php?p=10142996#post10142996
-    - change 'growthSparkle' to 'stopGrowth'
-- 
+    - replace 'growthSparkle' with 'stopGrowth'
+- Dynamic Trade Names: https://github.com/pret/pokeemerald/wiki/Dynamic-Trade-Names
 
 [Overworld]:
 - Pokecenters Disregard Eggs: https://github.com/pret/pokeemerald/wiki/Pokecenters-Disregard-Eggs
@@ -148,13 +144,20 @@ working modifications (added):
 - 
 
 [Battling]:
-- Set Trainer's Levels Dynamically: https://www.pokecommunity.com/showpost.php?p=10099773
-- Set Wild Pokémon's Levels Dynamically: https://www.pokecommunity.com/showpost.php?p=10100138
+- Change Time Based Evolution Times: https://github.com/pret/pokeemerald/wiki/Change-Time-Based-Evolution-Times
 - Always inherit nature when holding an Everstone: https://www.pokecommunity.com/showpost.php?p=10160374#post10160374
-- Create Pokémon with Three Perfect IVs: https://www.pokecommunity.com/showpost.php?p=10410959
+- Gen 6 style Exp. Share Alternative Option: https://github.com/pret/pokeemerald/wiki/Gen-6-style-Exp.-Share---Alternative-Option
 - Prevent Roamers From Fleeing: https://www.pokecommunity.com/showpost.php?p=10533514#post10533514
     - delete function logic from AI_Roaming() in src\battle_ai_main.c
-
+- Create Pokémon with Three Perfect IVs: https://www.pokecommunity.com/showpost.php?p=10410959
+- Inherit moves from both parents: https://www.pokecommunity.com/showpost.php?p=10416415
+    - replace 'CanMonLearnTMHM(egg, j)' with 'CanLearnTeachableMove(GetMonData(egg), ItemIdToBattleMoveId(j))'
+- Change Starter Pokémon: https://github.com/pret/pokeemerald/wiki/Change-Starter-Pok%C3%A9mon
+- 
+- Shifting to Pokémon Already in Battle Exits the Shift Menu: https://github.com/pret/pokeemerald/wiki/Shifting-to-Pok%C3%A9mon-Already-in-Battle-Exits-the-Shift-Menu
+- Get Rid of Pokemon Disobeying You: https://github.com/pret/pokeemerald/wiki/Get-Rid-of-Pokemon-Disobeying-You
+- Make Pokemon that Require a Fateful Encounter to be Legal to Always Be Set to Legal: https://github.com/pret/pokeemerald/wiki/Make-Pokemon-that-Require-a-Fateful-Encounter-to-be-Legal-to-Always-Be-Set-to-Legal
+- 
 
 
 added feature branches:
@@ -165,10 +168,6 @@ Samu/Xhyzi's DNS: https://github.com/Xhyzi/pokeemerald/tree/day-and-night
 all feature branches can be found at: https://github.com/pret/pokeemerald/wiki/Feature-Branches
 
 Stair Warps: https://github.com/pret/pokeemerald/wiki/Stair-Warps
-
-Gen. 6 styled Exp. Share: https://www.pokecommunity.com/showthread.php?p=10060538#post10060538
-
-FRLG / Gen IV and Onwards White Out Money Calculation (with messages): https://www.pokecommunity.com/showthread.php?p=10137272#post10137272
 
 Auto-Run: https://www.pokecommunity.com/showthread.php?p=10161076#post10161076
     - https://www.pokecommunity.com/showthread.php?p=10161111#post10161111
@@ -192,7 +191,8 @@ Bag Sorting: https://www.pokecommunity.com/showthread.php?p=10167488#post1016748
 MAYBE BROKEN:
 - [UI] Remove the functionally redundant move grammar tables: https://github.com/pret/pokeemerald/wiki/Remove-the-functionally-redundant-move-grammar-tables
 - [UI] Make L Button Be Turbo A When L=A Option Is Set: https://github.com/pret/pokeemerald/wiki/Make-L-Button-Be-Turbo-A-When-L=A-Option-Is-Set
-
+- [Battling] Set Trainer's Levels Dynamically: https://www.pokecommunity.com/showpost.php?p=10099773
+- [Battling] Set Wild Pokémon's Levels Dynamically: https://www.pokecommunity.com/showpost.php?p=10100138
 
 
 NOT WORKING:
@@ -208,4 +208,7 @@ NOT WORKING:
     - builds but doens't work
 - [UI] Chain Fishing: https://github.com/pret/pokeemerald/wiki/Chain-Fishing
 - [UI]  Make text autoscroll: https://www.pokecommunity.com/showpost.php?p=10266389
-- 
+- [Item] Item Automatically Goes to PC if Bag is Full: https://github.com/pret/pokeemerald/wiki/Item-Automatically-Goes-to-PC-if-Bag-is-Full
+    - bad instruction `checkdecorspace'
+- [Battling] Destiny Knot IV Inheritance Implementation: https://www.pokecommunity.com/showpost.php?p=10161151
+- [Battling] Power item and Destiny Knot breeding: https://www.pokecommunity.com/showpost.php?p=10488226

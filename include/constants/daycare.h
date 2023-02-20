@@ -16,7 +16,7 @@
 #if P_EGG_HATCH_LEVEL >= GEN_4
 #define EGG_HATCH_LEVEL 1
 #else
-#define EGG_HATCH_LEVEL 5
+#define EGG_HATCH_LEVEL 1
 #endif
 #define EGG_GENDER_MALE 0x8000  // used to create a male egg from a female-only parent species (e.g. Nidoran)
 
