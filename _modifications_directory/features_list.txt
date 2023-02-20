@@ -73,6 +73,18 @@ working modifications (added):
     - in function CB2_SetUpReshowBattleScreenAfterEvolution, replace 'ReshowBattleScreenAfterMenu' with 'CB2_SetUpReshowBattleScreenAfterMenu'
     - in function CopyPlayerPartyMonToBattleData, exclude the 'resetStats' condition
     - in function PlayerTryEvolution, append additional argument 'NULL' to 'GetEvolutionTargetSpecies'
+- Move Relearner as an option in the Pokémon Party Screen: https://www.pokecommunity.com/showpost.php?p=10470602
+    - 'FLAG_PARTY_MOVES' to add to include\constants\flags.h
+    - 'MENU_MOVES,' to add to enum dictionary in src\party_menu.c
+    - increment the value in 'u8 actions[8];' in 'struct PartyMenuInternal' as needed
+    - replace 'CB2_ReturnToPartyMenuFromSummaryScreen()' with 'SetMainCallback2(CB2_ReturnToPartyMenuFromSummaryScreen)'
+    - define 'CB2_ReturnToPartyMenuFromSummaryScreen()' in src\party_menu.c as below (no need to forward declare):
+        - void CB2_ReturnToPartyMenuFromSummaryScreen(void)
+            {
+                gPaletteFade.bufferTransferDisabled = TRUE;
+                gPartyMenu.slotId = gLastViewedMonIndex;
+                InitPartyMenu(gPartyMenu.menuType, KEEP_PARTY_LAYOUT, gPartyMenu.action, TRUE, PARTY_MSG_DO_WHAT_WITH_MON, Task_TryCreateSelectionWindow, gPartyMenu.exitCallback);
+            }
 - Show Type Effectiveness In-Battle: https://www.pokecommunity.com/showpost.php?p=10167016#post10167016
     - https://www.pokecommunity.com/showpost.php?p=10582554#post10582554
     - the dictionaries pasted in src\battle_messages.c & src\battle_bg.c should be assigned to keys, i.e. [24], [25], [26]
@@ -163,6 +175,9 @@ working modifications (added):
 - Shifting to Pokémon Already in Battle Exits the Shift Menu: https://github.com/pret/pokeemerald/wiki/Shifting-to-Pok%C3%A9mon-Already-in-Battle-Exits-the-Shift-Menu
 - Get Rid of Pokemon Disobeying You: https://github.com/pret/pokeemerald/wiki/Get-Rid-of-Pokemon-Disobeying-You
 - Make Pokemon that Require a Fateful Encounter to be Legal to Always Be Set to Legal: https://github.com/pret/pokeemerald/wiki/Make-Pokemon-that-Require-a-Fateful-Encounter-to-be-Legal-to-Always-Be-Set-to-Legal
+
+
+- Move Relearner as an option in the Pokémon Party Screen: https://www.pokecommunity.com/showpost.php?p=10470602
 
 
 

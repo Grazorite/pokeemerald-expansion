@@ -1836,3 +1836,5 @@ const u8 gText_XsYWereSwapped[] = _("{STR_VAR_1}'s\l{STR_VAR_2} were swapped!{PA
 
 const u8 gText_Nickname[] = _("NICKNAME");
 const u8 gText_ThrowInPremierBalls[] = _("I'll throw in some Premier Balls, too.{PAUSE_UNTIL_PRESS}");
+
+const u8 gText_Moves_Menu[] = _("CHANGE MOVES");
