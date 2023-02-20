@@ -119,10 +119,18 @@ static bool8 CheckFeebas(void)
     s16 x, y;
     u8 route119Section = 0;
     u16 spotId;
+    bool8 feebasCatchAllTiles = TRUE;
 
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE119)
      && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE119))
     {
+        if(feebasCatchAllTiles)
+        {
+           if(Random() % 100 > 49)
+               return TRUE;
+           else
+               return FALSE;
+       }
         GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
         x -= MAP_OFFSET;
         y -= MAP_OFFSET;
@@ -1100,8 +1108,16 @@ static void ApplyFluteEncounterRateMod(u32 *encRate)
 
 static void ApplyCleanseTagEncounterRateMod(u32 *encRate)
 {
-    if (GetMonData(&gPlayerParty[0], MON_DATA_HELD_ITEM) == ITEM_CLEANSE_TAG)
-        *encRate = *encRate * 2 / 3;
+    int i;
+    
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM) == ITEM_CLEANSE_TAG)
+        {
+            *encRate = 0;
+            break;
+        }
+    }
 }
 
 bool8 TryDoDoubleWildBattle(void)

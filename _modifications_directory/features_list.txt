@@ -12,13 +12,13 @@ already implemented in pokeemerald-expansion:
 - [UI] Adding the Fairy Type: https://www.pokecommunity.com/showpost.php?p=10325868
 - [Item] Update Sitrus Berry's effect to Gen 4 standard: https://github.com/pret/pokeemerald/wiki/Update-Sitrus-Berry's-effect-to-Gen-4-standard
 - [Item] FRLG / Gen IV and Onwards White Out Money Calculation (with messages): https://www.pokecommunity.com/showpost.php?p=10137272&postcount=58
-- [Overworld] Allow running indoors: https://github.com/pret/pokeemerald/wiki/Allow-running-indoors
 - [Graphics] Trainer Class Based Poké Balls: https://github.com/pret/pokeemerald/wiki/Trainer-Class-Based-Pok%C3%A9-Balls
 - [Battling] Make eggs hatch at level 1 instead of 5: https://www.pokecommunity.com/showpost.php?p=10154622
 - [Battling] Obtain exp. points per catch: https://www.pokecommunity.com/showpost.php?p=10209772
 - [Battling] Gen. 8 Synchronize: https://www.pokecommunity.com/showpost.php?p=10097171
-- 
-
+- [Overworld] Toggle Trainer Sight: https://github.com/pret/pokeemerald/wiki/Toggle-Trainer-Sight
+- [Overworld] Deactivate Wild Encounters With A Flag: https://www.pokecommunity.com/showpost.php?p=9990805#post9990805
+- [Overworld] Allow running indoors: https://github.com/pret/pokeemerald/wiki/Allow-running-indoors
 
 working modifications (added):
 [Bugs]:
@@ -74,6 +74,7 @@ working modifications (added):
     - in function CopyPlayerPartyMonToBattleData, exclude the 'resetStats' condition
     - in function PlayerTryEvolution, append additional argument 'NULL' to 'GetEvolutionTargetSpecies'
 - Move Relearner as an option in the Pokémon Party Screen: https://www.pokecommunity.com/showpost.php?p=10470602
+    - https://www.pokecommunity.com/showpost.php?p=10470677#post10470677
     - 'FLAG_PARTY_MOVES' to add to include\constants\flags.h
     - 'MENU_MOVES,' to add to enum dictionary in src\party_menu.c
     - increment the value in 'u8 actions[8];' in 'struct PartyMenuInternal' as needed
@@ -135,18 +136,35 @@ working modifications (added):
 - Dynamic Trade Names: https://github.com/pret/pokeemerald/wiki/Dynamic-Trade-Names
 
 [Overworld]:
-- Pokecenters Disregard Eggs: https://github.com/pret/pokeemerald/wiki/Pokecenters-Disregard-Eggs
-- Speedy Nurse Joy: https://github.com/pret/pokeemerald/wiki/Speedy-Nurse-Joy
+- Stair Warps: https://github.com/pret/pokeemerald/wiki/Stair-Warps
+    - replace 'ScriptContext2_Disable' with 'ScriptContext_Stop'
+    - replace 'ScriptContext2_Enable' with 'ScriptContext_Enable'
+- Overworld 1HP Poison Survival: https://www.pokecommunity.com/showpost.php?p=10068565&postcount=32
+    - replace 'gText_PkmnFainted3' with 'gText_PkmnFainted_FldPsn'
+- Allow Feebas to be caught on any Valid Fishing Spot in Route 119 rather than only Three: https://github.com/pret/pokeemerald/wiki/Allow-Feebas-to-be-caught-on-any-Valid-Fishing-Spot-in-Route-119-rather-than-only-Three
 - Let a Pokémon forget any move they know: https://www.pokecommunity.com/showpost.php?p=10182839&postcount=119
     - https://www.pokecommunity.com/showpost.php?p=10232764&postcount=185
-- Overworld 1HP Poison Survival: https://www.pokecommunity.com/showpost.php?p=10068565&postcount=32
-    - 'gText_PkmnFainted3' replaced by 'gText_PkmnFainted_FldPsn'
 - Making Pokémon with Poison Heal be unaffected by poison in the overworld: https://www.pokecommunity.com/showpost.php?p=10349195&postcount=256
-- Allow player to change direction while moving: https://www.pokecommunity.com/showpost.php?p=10402610
+- Speedy Nurse Joy: https://github.com/pret/pokeemerald/wiki/Speedy-Nurse-Joy
+- Make Cleanse Tag Avoid All Wild Encounters and Usable If Held By Anyone in Your Party; Make PokeDoll Do the Same for Trainers Seeing You: https://github.com/pret/pokeemerald/wiki/Make-Cleanse-Tag-Avoid-All-Wild-Encounters-and-Usable-If-Held-By-Anyone-in-Your-Party;-Make-PokeDoll-Do-the-Same-for-Trainers-Seeing-You
+    - PokeDoll not implemented/working
+- Disabling Union Room check when entering Pokémon Centers: https://github.com/pret/pokeemerald/wiki/Disabling-Union-Room-check-when-entering-Pok%C3%A9mon-Centers
+- Enable the Reset RTC Feature: https://github.com/pret/pokeemerald/wiki/Enable-the-Reset-RTC-Feature
+- Pokecenters Disregard Eggs: https://github.com/pret/pokeemerald/wiki/Pokecenters-Disregard-Eggs
+- Removing Badge Checks for HMs: https://www.pokecommunity.com/showpost.php?p=10036664
 - Fast Surfing: https://www.pokecommunity.com/showpost.php?p=10137446&postcount=59
     - https://www.pokecommunity.com/showpost.php?p=10457096#post10457096
 - Running speed by default: https://www.pokecommunity.com/showpost.php?p=10541790&postcount=409
-- 
+- Omnidirectional Jump: https://github.com/pret/pokeemerald/wiki/Omnidirectional-Jump
+- Make Daycare Faster at Leveling Pokémon: https://github.com/pret/pokeemerald/wiki/Make-Daycare-Faster-at-Leveling-Pok%C3%A9mon
+
+- Allow Both Latios and Latias Appear.: https://github.com/pret/pokeemerald/wiki/Allow-Both-Latios-and-Latias-Appear.
+- Get Match Calls Only If Caller Wants a Rematch: https://github.com/pret/pokeemerald/wiki/Get-Match-Calls-Only-If-Caller-Wants-a-Rematch
+- Allow Jumping Over Ledges with Acro Bike: https://github.com/pret/pokeemerald/wiki/Allow-Jumping-Over-Ledges-with-Acro-Bike
+- Trainers No Longer Spin to Face You Right As You Pass Them: https://github.com/pret/pokeemerald/wiki/Trainers-No-Longer-Spin-to-Face-You-Right-As-You-Pass-Them
+
+- Allow player to change direction while moving: https://www.pokecommunity.com/showpost.php?p=10402610
+
 
 [Graphics]:
 - Enable the Opponent Trainers to throw Pokeball instead of dropping it directly to the battlefield.: https://www.pokecommunity.com/showpost.php?p=10546712&postcount=410
@@ -187,8 +205,6 @@ Samu/Xhyzi's DNS: https://github.com/Xhyzi/pokeemerald/tree/day-and-night
 
 
 all feature branches can be found at: https://github.com/pret/pokeemerald/wiki/Feature-Branches
-
-Stair Warps: https://github.com/pret/pokeemerald/wiki/Stair-Warps
 
 Auto-Run: https://www.pokecommunity.com/showthread.php?p=10161076#post10161076
     - https://www.pokecommunity.com/showthread.php?p=10161111#post10161111
