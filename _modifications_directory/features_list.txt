@@ -20,6 +20,8 @@ already implemented in pokeemerald-expansion:
 - [Overworld] Deactivate Wild Encounters With A Flag: https://www.pokecommunity.com/showpost.php?p=9990805#post9990805
 - [Overworld] Allow running indoors: https://github.com/pret/pokeemerald/wiki/Allow-running-indoors
 
+----------------------------------------------------------------
+
 working modifications (added):
 [Bugs]:
 - Faster HP Drain: https://github.com/pret/pokeemerald/wiki/Faster-HP-Drain
@@ -44,6 +46,8 @@ working modifications (added):
     - https://www.pokecommunity.com/showpost.php?p=10517557#post10517557
     - https://www.pokecommunity.com/showpost.php?p=10587921#post10587921
     - https://www.pokecommunity.com/showpost.php?p=10588071#post10588071
+- Bag Sorting: https://www.pokecommunity.com/showpost.php?p=10167488#post10167488
+    - replace 'ITEM_UP_GRADE' with 'ITEM_UPGRADE', 'ITEM_X_DEFEND' with 'ITEM_X_DEFENSE', 'ITEM_X_SPECIAL' with 'ITEM_X_SPATK' && 'ITEM_X_SPDEF', 'ITEM_STICK' with 'ITEM_LEEK'
 - Increase Text Speed Beyond Fast: https://www.pokecommunity.com/showpost.php?p=10400198
 - Remove Map Popups On Maps With The Same Map Section: https://www.pokecommunity.com/showpost.php?p=10449889
 - Editing Default Options Settings: https://www.pokecommunity.com/showpost.php?p=9967853&postcount=5
@@ -55,9 +59,9 @@ working modifications (added):
 - Have the game display Hidden Power's true base power (for pre - Gen VI power calculations): https://www.pokecommunity.com/showpost.php?p=10269828
 - Colored stats by nature in summary screen: https://github.com/pret/pokeemerald/wiki/Colored-stats-by-nature-in-summary-screen
 - DS-Style party screen: https://www.pokecommunity.com/showpost.php?p=10218092&postcount=173
-    - 2 versions, but use v1!
     - the 'enum' to declare 'PARTY_BOX_EQUAL_COLUMN' is found in src\party_menu.c NOT src\data\party_menu.h
-    - https://www.pokecommunity.com/showpost.php?p=10485268#post10485268
+    - v1 (currently implemented): https://www.pokecommunity.com/showpost.php?p=10485268#post10485268
+    - v2 (not working): https://www.pokecommunity.com/showpost.php?p=10567524#post10567524
 - Make text speed-up like holding the A/B buttons automatically: https://www.pokecommunity.com/showpost.php?p=10266385
 - Physical Special Split Icons In Battle: https://www.pokecommunity.com/showpost.php?p=10527471
 - Instead of Asking to Stop learning a New Move, You'll be Asked to Continue Learning: https://github.com/pret/pokeemerald/wiki/Instead-of-Asking-to-Stop-learning-a-New-Move,-You'll-be-Asked-to-Continue-Learning
@@ -206,22 +210,20 @@ Samu/Xhyzi's DNS: https://github.com/Xhyzi/pokeemerald/tree/day-and-night
 
 all feature branches can be found at: https://github.com/pret/pokeemerald/wiki/Feature-Branches
 
-Auto-Run: https://www.pokecommunity.com/showthread.php?p=10161076#post10161076
-    - https://www.pokecommunity.com/showthread.php?p=10161111#post10161111
+Rock Climb: https://www.pokecommunity.com/showpost.php?p=10202403#post10202403
 
-Rock Climb: https://www.pokecommunity.com/showthread.php?p=10202403#post10202403
+Grindrunning For Easier Diagonal Movement: https://www.pokecommunity.com/showpost.php?p=10202986#post10202986
 
-Grindrunning For Easier Diagonal Movement: https://www.pokecommunity.com/showthread.php?p=10202986#post10202986
+Improved scrolling options menu with faster text, HP and EXP bar speeds and a metric unit option!: https://www.pokecommunity.com/showpost.php?p=10275248#post10275248
 
-Omnidirectional Jumping: https://www.pokecommunity.com/showthread.php?p=10212519#post10212519
+Wonder Trade: https://www.pokecommunity.com/showpost.php?p=10357573#post10357573
 
-Improved scrolling options menu with faster text, HP and EXP bar speeds and a metric unit option!: https://www.pokecommunity.com/showthread.php?p=10275248#post10275248
+Register items in a list menu!: https://www.pokecommunity.com/showpost.php?p=10380770#post10380770
 
-Wonder Trade: https://www.pokecommunity.com/showthread.php?p=10357573#post10357573
 
-Register items in a list menu!: https://www.pokecommunity.com/showthread.php?p=10380770#post10380770
 
-Bag Sorting: https://www.pokecommunity.com/showthread.php?p=10167488#post10167488
+- [Overworld] Auto-Run: https://www.pokecommunity.com/showpost.php?p=10161076#post10161076
+    - https://www.pokecommunity.com/showpost.php?p=10161111#post10161111
 
 
 
@@ -236,9 +238,9 @@ NOT WORKING:
 - [UI] TM Case ported from FR and custom one!: https://www.pokecommunity.com/showpost.php?p=10378278
     - maybe can try fr_tm_case_port branch: https://github.com/pret/pokeemerald/compare/master...TheXaman:pokeemerald:fr_tm_case_port
 - [UI] Nature Mints: https://www.pokecommunity.com/showpost.php?p=10245635&postcount=191
-- [Item] Item Descriptions On First Obtain: https://www.pokecommunity.com/showthread.php?p=10126502#post10126502
+- [Item] Item Descriptions On First Obtain: https://www.pokecommunity.com/showpost.php?p=10126502#post10126502
     - size of array `SaveBlock2FreeSpace' is negative
-- [Item] Register Items with LR: https://www.pokecommunity.com/showthread.php?p=10134388#post10134388
+- [Item] Register Items with LR: https://www.pokecommunity.com/showpost.php?p=10134388#post10134388
     - need to find renamed sub methods
 - [UI] Use Fly/Flash from party menu if Pokémon is compatible: https://www.pokecommunity.com/showpost.php?p=10420068
     - replace 'CanMonLearnTMHM(&mons[slotId], ITEM_HM02 - ITEM_TM01)' with 'CanLearnTeachableMove(GetMonData(&mons[slotId]), ItemIdToBattleMoveId(ITEM_HM02 - ITEM_TM01))'
@@ -249,3 +251,4 @@ NOT WORKING:
     - bad instruction `checkdecorspace'
 - [Battling] Destiny Knot IV Inheritance Implementation: https://www.pokecommunity.com/showpost.php?p=10161151
 - [Battling] Power item and Destiny Knot breeding: https://www.pokecommunity.com/showpost.php?p=10488226
+- [Overworld] Overworld Expansion: https://www.pokecommunity.com/showpost.php?p=10221532&postcount=176
