@@ -161,13 +161,13 @@ working modifications (added):
 - Running speed by default: https://www.pokecommunity.com/showpost.php?p=10541790&postcount=409
 - Omnidirectional Jump: https://github.com/pret/pokeemerald/wiki/Omnidirectional-Jump
 - Make Daycare Faster at Leveling Pokémon: https://github.com/pret/pokeemerald/wiki/Make-Daycare-Faster-at-Leveling-Pok%C3%A9mon
-
 - Allow Both Latios and Latias Appear.: https://github.com/pret/pokeemerald/wiki/Allow-Both-Latios-and-Latias-Appear.
 - Get Match Calls Only If Caller Wants a Rematch: https://github.com/pret/pokeemerald/wiki/Get-Match-Calls-Only-If-Caller-Wants-a-Rematch
 - Allow Jumping Over Ledges with Acro Bike: https://github.com/pret/pokeemerald/wiki/Allow-Jumping-Over-Ledges-with-Acro-Bike
 - Trainers No Longer Spin to Face You Right As You Pass Them: https://github.com/pret/pokeemerald/wiki/Trainers-No-Longer-Spin-to-Face-You-Right-As-You-Pass-Them
 
 - Allow player to change direction while moving: https://www.pokecommunity.com/showpost.php?p=10402610
+- Remove having to reel in while Fishing: https://www.pokecommunity.com/showpost.php?p=10228943#post10228943
 
 
 [Graphics]:
@@ -197,9 +197,10 @@ working modifications (added):
 - Shifting to Pokémon Already in Battle Exits the Shift Menu: https://github.com/pret/pokeemerald/wiki/Shifting-to-Pok%C3%A9mon-Already-in-Battle-Exits-the-Shift-Menu
 - Get Rid of Pokemon Disobeying You: https://github.com/pret/pokeemerald/wiki/Get-Rid-of-Pokemon-Disobeying-You
 - Make Pokemon that Require a Fateful Encounter to be Legal to Always Be Set to Legal: https://github.com/pret/pokeemerald/wiki/Make-Pokemon-that-Require-a-Fateful-Encounter-to-be-Legal-to-Always-Be-Set-to-Legal
-
-
 - Move Relearner as an option in the Pokémon Party Screen: https://www.pokecommunity.com/showpost.php?p=10470602
+
+- Wild Pokémon Drop Held Items: https://www.pokecommunity.com/showpost.php?p=10506824#post10506824
+
 
 
 
@@ -211,20 +212,8 @@ Samu/Xhyzi's DNS: https://github.com/Xhyzi/pokeemerald/tree/day-and-night
 all feature branches can be found at: https://github.com/pret/pokeemerald/wiki/Feature-Branches
 
 Rock Climb: https://www.pokecommunity.com/showpost.php?p=10202403#post10202403
-
-Grindrunning For Easier Diagonal Movement: https://www.pokecommunity.com/showpost.php?p=10202986#post10202986
-
 Improved scrolling options menu with faster text, HP and EXP bar speeds and a metric unit option!: https://www.pokecommunity.com/showpost.php?p=10275248#post10275248
-
 Wonder Trade: https://www.pokecommunity.com/showpost.php?p=10357573#post10357573
-
-Register items in a list menu!: https://www.pokecommunity.com/showpost.php?p=10380770#post10380770
-
-
-
-- [Overworld] Auto-Run: https://www.pokecommunity.com/showpost.php?p=10161076#post10161076
-    - https://www.pokecommunity.com/showpost.php?p=10161111#post10161111
-
 
 
 MAYBE BROKEN:
@@ -235,6 +224,8 @@ MAYBE BROKEN:
 
 
 NOT WORKING:
+- [UI] Register items in a list menu!: https://www.pokecommunity.com/showpost.php?p=10380770#post10380770
+    - implicit declaration of 'EnableBothScriptContexts'
 - [UI] TM Case ported from FR and custom one!: https://www.pokecommunity.com/showpost.php?p=10378278
     - maybe can try fr_tm_case_port branch: https://github.com/pret/pokeemerald/compare/master...TheXaman:pokeemerald:fr_tm_case_port
 - [UI] Nature Mints: https://www.pokecommunity.com/showpost.php?p=10245635&postcount=191
@@ -242,13 +233,14 @@ NOT WORKING:
     - size of array `SaveBlock2FreeSpace' is negative
 - [Item] Register Items with LR: https://www.pokecommunity.com/showpost.php?p=10134388#post10134388
     - need to find renamed sub methods
-- [UI] Use Fly/Flash from party menu if Pokémon is compatible: https://www.pokecommunity.com/showpost.php?p=10420068
-    - replace 'CanMonLearnTMHM(&mons[slotId], ITEM_HM02 - ITEM_TM01)' with 'CanLearnTeachableMove(GetMonData(&mons[slotId]), ItemIdToBattleMoveId(ITEM_HM02 - ITEM_TM01))'
-    - builds but doens't work
 - [UI] Chain Fishing: https://github.com/pret/pokeemerald/wiki/Chain-Fishing
 - [UI]  Make text autoscroll: https://www.pokecommunity.com/showpost.php?p=10266389
 - [Item] Item Automatically Goes to PC if Bag is Full: https://github.com/pret/pokeemerald/wiki/Item-Automatically-Goes-to-PC-if-Bag-is-Full
     - bad instruction `checkdecorspace'
 - [Battling] Destiny Knot IV Inheritance Implementation: https://www.pokecommunity.com/showpost.php?p=10161151
 - [Battling] Power item and Destiny Knot breeding: https://www.pokecommunity.com/showpost.php?p=10488226
+- [Overworld] Grindrunning For Easier Diagonal Movement: https://www.pokecommunity.com/showpost.php?p=10202986#post10202986
 - [Overworld] Overworld Expansion: https://www.pokecommunity.com/showpost.php?p=10221532&postcount=176
+- [Overworld] Use HMs Without Any Pokemon in your Party Knowing Them: https://github.com/pret/pokeemerald/wiki/Use-HMs-Without-Any-Pokemon-in-your-Party-Knowing-Them
+    - replace 'CanMonLearnTMHM(&mons[slotId], ITEM_HM02 - ITEM_TM01)' with 'CanLearnTeachableMove(GetMonData(&mons[slotId]), ItemIdToBattleMoveId(ITEM_HM02 - ITEM_TM01))'
+    - builds but doens't work
